@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -15,6 +16,7 @@ public class write extends AppCompatActivity {
     String id_board,pwd_board;
     EditText title,content;
     Button post_btn;
+    ImageView back_icon;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -24,15 +26,27 @@ public class write extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
 
-        title = findViewById(R.id.board_title);
-        content = findViewById(R.id.board_content);
-
-        post_btn = findViewById(R.id.post_btn);
-
         Intent intent = getIntent();
         id_board=intent.getStringExtra("id_board");
         pwd_board=intent.getStringExtra("passwd_board");
 
+
+        back_icon = findViewById(R.id.back);
+
+        back_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(),StartActivity.class);
+                intent.putExtra("id",id_board);
+                intent.putExtra("passwd",pwd_board);
+                startActivity(intent);
+            }
+        });
+
+        title = findViewById(R.id.board_title);
+        content = findViewById(R.id.board_content);
+
+        post_btn = findViewById(R.id.post_btn);
 
         post_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +54,16 @@ public class write extends AppCompatActivity {
                 databaseReference.child("user").child(id_board).child("board").child("title").push().setValue(title.getText().toString());
                 databaseReference.child("user").child(id_board).child("board").child("content").push().setValue(content.getText().toString());
 
+                databaseReference.child("board").child(title.getText().toString()).child("content").push().setValue(content.getText().toString());
+                databaseReference.child("board").child(title.getText().toString()).child("id").push().setValue(id_board);
+
+                databaseReference.child("board_value").child(title.getText().toString()).setValue(id_board);
+
                 Toast.makeText(getApplication(),"성공적으로 게시 되었습니다",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplication(),StartActivity.class);
+                intent.putExtra("id",id_board);
+                intent.putExtra("passwd",pwd_board);
+                startActivity(intent);
             }
         });
 

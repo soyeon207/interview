@@ -91,6 +91,7 @@ public class signup extends AppCompatActivity {
                      intent.putExtra("id",room);
                      intent.putExtra("passwd",passwd.getText().toString());
                     startActivity(intent);
+
             }
         });
     }

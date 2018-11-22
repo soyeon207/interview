@@ -27,12 +27,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
         <activity android:name=".signup" />
         <activity android:name=".login" />
         <activity android:name=".menu" />
         <activity android:name=".StartActivity" />
-        <activity android:name=".write"></activity>
+        <activity
+            android:name=".write"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MockInterview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FreeInterview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListContent"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".post"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
     </application>
 
 </manifest>

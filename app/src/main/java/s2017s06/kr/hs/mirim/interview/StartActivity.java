@@ -6,12 +6,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,14 +26,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class StartActivity extends TabActivity {
-    TextView nickshow;
-    Button exit_btn;
-    ImageView re, write;
-    String id,pwd;
-
+    TextView nickshow,interview;
+    Button Mock,Free;
+    TextView exit_btn;
+    ImageView write;
+    String pwd2,id2;
+    int positions;
+    ListView listView;
+    MyListAdapter myListAdapter;
+    Button tip_1,tip_2,tip_3;
+    ArrayList<list_item> list_itemArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +48,123 @@ public class StartActivity extends TabActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        Intent intent = getIntent();
-        id =intent.getStringExtra("id");
-        pwd=intent.getStringExtra("passwd");
+        tip_1 = findViewById(R.id.tip_btn1);
+        tip_2 = findViewById(R.id.tip_btn2);
+        tip_3 = findViewById(R.id.tip_btn3);
 
-        re = findViewById(R.id.re);
+        tip_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://univ20.com/48245?fbclid=IwAR38qBizGRMKobVT4pxV48YvxjicZNK_n_SOhJRR9edY0yGWvYy-9gzb5xk"));
+                startActivity(intent);
+            }
+        });
+
+        tip_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://brunch.co.kr/@kylelee/19?fbclid=IwAR05VujuhA0xzr6v8BYWXTDeySiu61zGGrL_W23dPiNd6_wrQw3UNcIWuhU"));
+                startActivity(intent);
+            }
+        });
+
+        tip_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://brunch.co.kr/@jobplanet/4?fbclid=IwAR1V1FSlpksTgn91I6TWa02WlHPwrLnjzx-1MFwbDlqFLJGwROApcJcS7nU"));
+                startActivity(intent);
+            }
+        });
+
+        Intent intent = getIntent();
+        id2 =intent.getStringExtra("id");
+        pwd2=intent.getStringExtra("passwd");
+
+        listView = findViewById(R.id.start_listview);
+        list_itemArrayList = new ArrayList<list_item>();
+
+
+        myListAdapter = new MyListAdapter(StartActivity.this,list_itemArrayList);
+
+        FirebaseDatabase mdatabase2 = FirebaseDatabase.getInstance();
+        DatabaseReference mdatabaseRef2 = mdatabase2.getReference("board_value");
+
+        mdatabaseRef2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot message:dataSnapshot.getChildren()){
+
+                    long now = System.currentTimeMillis();
+                    Date date = new Date(now);
+                    SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd");
+                    String formatDate = sdfNow.format(date);
+                    list_itemArrayList.add(new list_item(message.getValue().toString(),message.getKey(),formatDate));
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        listView.setAdapter(myListAdapter);
+
+        Mock = findViewById(R.id.Mock);
+        Free = findViewById(R.id.Free);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, final long id) {
+
+                positions = position;
+
+                FirebaseDatabase lion = FirebaseDatabase.getInstance();
+                DatabaseReference lion2 = lion.getReference("board");
+
+                lion2.child(list_itemArrayList.get(position).getTitle()).child("content").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for(DataSnapshot message:dataSnapshot.getChildren()){
+                            Intent intent = new Intent(getApplication(),ListContent.class);
+                            intent.putExtra("content2",message.getValue().toString());
+                            intent.putExtra("title",list_itemArrayList.get(positions).getTitle());
+                            intent.putExtra("nick",list_itemArrayList.get(positions).getNickname());
+                            intent.putExtra("id_board",id2);
+                            intent.putExtra("passwd_board",pwd2);
+                            startActivity(intent);
+                        }
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+            }
+        });
+
         write = findViewById(R.id.write);
+
+        Mock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(),MockInterview.class);
+                intent.putExtra("id_mock",id2);
+                intent.putExtra("pwd_mock",pwd2);
+                startActivity(intent);
+            }
+        });
+
+        Free.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(),FreeInterview.class);
+                intent.putExtra("id_free",id2);
+                intent.putExtra("pwd_free",pwd2);
+                startActivity(intent);
+            }
+        });
 
         write.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,8 +172,8 @@ public class StartActivity extends TabActivity {
 
                 Intent intent = new Intent(getApplication(),write.class);
 
-                intent.putExtra("id_board",id);
-                intent.putExtra("passwd_board",pwd);
+                intent.putExtra("id_board",id2);
+                intent.putExtra("passwd_board",pwd2);
 
                 startActivity(intent);
 
@@ -72,13 +193,13 @@ public class StartActivity extends TabActivity {
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent intent = new Intent(getApplication(),MainActivity.class);
+                                Intent intent = new Intent(getApplication(),login.class);
                                 startActivity(intent);
 
                                 FirebaseDatabase mdatabase_remove = FirebaseDatabase.getInstance();
                                 DatabaseReference mdatabaseRef_remove = mdatabase_remove.getReference("user");
 
-                                mdatabaseRef_remove.child(id).addValueEventListener(new ValueEventListener() {
+                                mdatabaseRef_remove.child(id2).addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(DataSnapshot dataSnapshot) {
                                         for(DataSnapshot message:dataSnapshot.getChildren()){
@@ -99,7 +220,7 @@ public class StartActivity extends TabActivity {
                                     @Override
                                     public void onDataChange(DataSnapshot dataSnapshot) {
                                         for(DataSnapshot remove_id:dataSnapshot.getChildren()){
-                                            if(remove_id.getValue().toString().equals(id)){
+                                            if(remove_id.getValue().toString().equals(id2)){
                                                 remove_id.getRef().removeValue();
                                             }
                                         }
@@ -125,10 +246,10 @@ public class StartActivity extends TabActivity {
             }
         });
 
-        FirebaseDatabase mdatabase2 = FirebaseDatabase.getInstance();
-        DatabaseReference mdatabaseRef2 = mdatabase2.getReference("user");
+        FirebaseDatabase list = FirebaseDatabase.getInstance();
+        DatabaseReference listRef = list.getReference("user");
 
-        mdatabaseRef2.child(id).child("nick").addValueEventListener(new ValueEventListener() {
+        listRef.child(id2).child("nick").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot message:dataSnapshot.getChildren()){
@@ -192,4 +313,8 @@ public class StartActivity extends TabActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }
+    @Override public void onBackPressed() { }
 }
+
+
+
