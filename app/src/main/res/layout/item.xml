@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/title_textview"
+        android:layout_marginLeft="15dp"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+        android:paddingLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cop 동아리 모집합니다"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           >
+
+
+           <TextView
+               android:layout_marginTop="3dp"
+               android:textColor="#383838"
+               android:id="@+id/nickname_textview"
+               android:layout_toRightOf="@id/one"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="right"
+
+               android:text="소연" />
+
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text=" | "
+               android:textColor="#FF383838"
+               android:id="@+id/one"
+               android:layout_marginTop="3dp"
+               android:layout_toRightOf="@id/date_textview"
+               />
+
+           <TextView
+               android:paddingLeft="5dp"
+               android:layout_marginTop="3dp"
+               android:textColor="#FF383838"
+               android:id="@+id/date_textview"
+               android:layout_marginLeft="15dp"
+               android:layout_alignParentLeft="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="2018년 11월 21일"
+               />
+
+       </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
