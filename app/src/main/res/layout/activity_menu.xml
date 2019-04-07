@@ -31,7 +31,7 @@
                     android:layout_height="185dp"
                     android:layout_marginRight="3dp"
                     android:layout_weight="1"
-                    android:background="@drawable/circle_button"
+                    android:background="@drawable/circle_color"
                     android:text="모의"
                     android:textColor="#0078d7"
                     android:textSize="50dp" />
@@ -41,7 +41,7 @@
                     android:layout_height="185dp"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"
-                    android:background="@drawable/circle_button"
+                    android:background="@drawable/circle_color"
                     android:text="자유"
                     android:textColor="#0078d7"
                     android:textSize="50dp" />

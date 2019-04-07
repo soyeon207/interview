@@ -14,7 +14,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,7 +34,7 @@ import java.util.Date;
 
 public class StartActivity extends TabActivity {
     TextView nickshow,interview;
-    Button Mock,Free;
+    RelativeLayout Mock,Free;
     TextView exit_btn;
     ImageView write;
     String pwd2,id2;
