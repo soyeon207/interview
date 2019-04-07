@@ -28,7 +28,8 @@
                 <RelativeLayout
                     android:id="@+id/relative_interview"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/under_line">
 
                     <TextView
                         android:id="@+id/interview"
@@ -55,7 +56,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="#AF3421">
+                        android:background="@color/main">
 
                         <Button
                             android:id="@+id/mock_btn"
@@ -109,7 +110,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
                             android:text="자유 면접"
-                            android:textColor="#AF3421"
+                            android:textColor="@color/main"
                             android:textSize="40dp"
                             android:layout_below="@+id/free_btn"
                             android:layout_centerHorizontal="true"/>
@@ -119,7 +120,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
                             android:text="자유 면접"
-                            android:textColor="#AF3421"
+                            android:textColor="@color/main"
                             android:textSize="15dp"
                             android:layout_below="@+id/free_text"
                             android:layout_centerHorizontal="true"/>
@@ -140,18 +141,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#0078d7"
+                    android:background="@drawable/under_line"
                     android:padding="15dp"
                     android:text="Tip"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/main"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     android:gravity="center"
                     android:text="누르면 외부 사이트로 연결됩니다. "
                     android:textColor="#333333"
@@ -167,33 +168,80 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <Button
+                        <LinearLayout
                             android:id="@+id/tip_btn1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:orientation="horizontal">
 
-                            android:background="@drawable/btn_back"
-                            android:text="다 된 취업에 면접 뿌리지 않는 팁 7"
-                            android:textColor="#333333"
-                            android:textSize="18dp" />
+                            <Button
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/circle_color"/>
 
-                        <Button
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="30dp"
+                                android:text="다 된 취업에 면접 뿌리지 않는 팁 7"
+                                android:textColor="#333333"
+                                android:textSize="18dp"
+                                android:gravity="center"
+                                android:background="@drawable/box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:id="@+id/tip_btn2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/btn_back"
-                            android:text="채용담당자가 전하는 취업준비 Tip 17"
-                            android:textColor="#333333"
-                            android:textSize="18dp" />
+                            android:layout_margin="15dp"
+                            android:orientation="horizontal">
 
-                        <Button
+                            <Button
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/circle_color"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="30dp"
+                                android:text="채용담당자가 전하는 취업준비 TIP 17"
+                                android:textColor="#333333"
+                                android:textSize="18dp"
+                                android:gravity="center"
+                                android:background="@drawable/box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:id="@+id/tip_btn3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/btn_back"
-                            android:text="성공적인 취업을 위한 면접준비 팁"
-                            android:textColor="#333333"
-                            android:textSize="18dp" />
+                            android:layout_margin="15dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/circle_color"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="30dp"
+                                android:text="성공적인 취업을 위한 면접준비 팁"
+                                android:textColor="#333333"
+                                android:textSize="18dp"
+                                android:gravity="center"
+                                android:background="@drawable/box"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -258,11 +306,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#0078d7"
+                    android:background="@drawable/under_line"
                     android:padding="15dp"
                     android:text="My"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/main"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -286,31 +334,26 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:text="소연"
-                        android:textColor="#000000"
+                        android:textColor="@color/main"
                         android:textSize="20dp" />
 
                     <TextView
                         android:id="@+id/nickname"
                         android:layout_width="wrap_content"
-
                         android:layout_height="wrap_content"
                         android:text="님 안녕하세요"
-                        android:textColor="#000000"
-
+                        android:textColor="@color/main"
                         android:textSize="20dp" />
-
 
                 </LinearLayout>
 
 
                 <View
-
                     android:layout_width="wrap_content"
-                    android:layout_height="0.3dp"
+                    android:layout_height="0.5dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:background="#000000" />
-
+                    android:background="@color/main" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -334,7 +377,7 @@
                         android:layout_toRightOf="@id/playbutton"
                         android:background="#ffffff"
                         android:text="영상보기"
-                        android:textColor="#000000"
+                        android:textColor="@color/main"
                         android:textSize="20dp" />
 
 
@@ -359,7 +402,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:text="탈퇴"
-                        android:textColor="#000000"
+                        android:textColor="@color/main"
                         android:textSize="20dp" />
 
                 </LinearLayout>

@@ -9,29 +9,119 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/under_line">
 
         <TextView
+            android:id="@+id/top_text"
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="모의 면접"
             android:textSize="20dp"
             android:padding="15dp"
-            android:textColor="#ffffff"
+            android:textColor="@color/main"
             android:textAlignment="center"
-            android:background="#0078d7"
-            />
+            android:background="#ffffff"/>
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/home_icon"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:id="@+id/free_home"
-            />
+            android:id="@+id/free_home"/>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/top_text"
+            android:background="@color/main"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/under_line">
+
+                <Button
+                    android:id="@+id/mock_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/circle_nocolor"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/mock_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="직종별"
+                    android:textColor="@color/main"
+                    android:textSize="40dp"
+                    android:layout_below="@+id/mock_btn"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="원하는 직종에 맞는 질문을 제공합니다."
+                    android:textColor="@color/main"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/mock_text"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffffff">
+
+                <Button
+                    android:id="@+id/free_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/circle_nocolor"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/free_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="자유 면접"
+                    android:textColor="@color/main"
+                    android:textSize="40dp"
+                    android:layout_below="@+id/free_btn"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="원하는 기업에 맞는 질문을 제공합니다."
+                    android:textColor="@color/main"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/free_text"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
 
     </RelativeLayout>
 

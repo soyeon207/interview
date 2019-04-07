@@ -41,7 +41,7 @@ public class StartActivity extends TabActivity {
     int positions;
     ListView listView;
     MyListAdapter myListAdapter;
-    Button tip_1,tip_2,tip_3;
+    LinearLayout tip_1,tip_2,tip_3;
     ArrayList<list_item> list_itemArrayList;
 
     @Override
@@ -265,9 +265,6 @@ public class StartActivity extends TabActivity {
             }
         });
 
-
-
-
         final TabHost tabHost=getTabHost();
         ArrayList<TabHost.TabSpec> tabSpecs= new ArrayList<TabHost.TabSpec>();
         String[] texts={"면접", "Tip", "커뮤니티", "My"};
@@ -299,7 +296,7 @@ public class StartActivity extends TabActivity {
             tabhost.getTabWidget().getChildAt(i).setBackgroundResource(R.color.white);
 
             TextView tv = tabhost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
-            tv.setTextColor(Color.parseColor("#FF535353"));
+            tv.setTextColor(Color.parseColor("#AF3421"));
         }
 
 
@@ -308,7 +305,7 @@ public class StartActivity extends TabActivity {
 
         tabhost.getTabWidget().setCurrentTab(0);
         tabhost.getTabWidget().getChildAt(tabhost.getCurrentTab())
-                .setBackgroundResource(R.color.colorMain);
+                .setBackgroundResource(R.color.main);
     }
 
     @Override
