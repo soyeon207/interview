@@ -35,7 +35,7 @@
         android:inputType="text"
         android:textColor="#000000"
         android:textColorHint="#AF3421"
-        android:background="#ffffff"
+        android:background="@drawable/under_line"
         android:padding="10dp"
         android:drawableStart="@drawable/ic_face_black_24dp"
         android:drawableLeft="@drawable/ic_face_black_24dp"
@@ -43,6 +43,7 @@
         />
 
     <EditText
+        android:background="@drawable/under_line"
         android:layout_below="@id/loginid"
         android:id="@+id/loginpwd"
         android:layout_width="match_parent"
