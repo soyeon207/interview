@@ -115,7 +115,6 @@ public class StartActivity extends TabActivity {
         Mock = findViewById(R.id.Mock);
         Free = findViewById(R.id.Free);
 
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, final long id) {

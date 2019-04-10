@@ -18,9 +18,9 @@
             android:text="커뮤니티"
             android:textSize="20dp"
             android:padding="15dp"
-            android:textColor="#ffffff"
+            android:textColor="#AF3421"
             android:textAlignment="center"
-            android:background="#0078d7"
+            android:background="@drawable/under_line"
             />
 
         <ImageView
@@ -77,8 +77,6 @@
                 />
         </LinearLayout>
 
-
-
         <TextView
             android:gravity="center_horizontal"
             android:layout_marginTop="10dp"
@@ -98,7 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="      댓글 달기"
-        android:background="#0078d7"
+        android:background="#AF3421"
         android:textColor="#ffffff"
         android:padding="5dp"
         />
@@ -124,7 +122,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:background="#0078d7"
+                android:background="#AF3421"
                 android:textColor="#ffffff"
                 android:id="@+id/reply_btn"
                 android:text="게시"

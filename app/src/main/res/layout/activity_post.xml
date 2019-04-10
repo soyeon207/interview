@@ -18,9 +18,9 @@
             android:text="커뮤니티"
             android:textSize="20dp"
             android:padding="15dp"
-            android:textColor="#ffffff"
+            android:textColor="#AF3421"
             android:textAlignment="center"
-            android:background="@color/main"
+            android:background="@drawable/under_line"
             />
 
         <ImageView

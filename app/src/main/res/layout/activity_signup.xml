@@ -154,8 +154,6 @@
             />
     </LinearLayout>
 
-
-
     <Button
         android:id="@+id/sign"
         android:layout_width="match_parent"
