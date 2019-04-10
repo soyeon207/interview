@@ -30,6 +30,7 @@
             android:background="@drawable/home_icon"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:id="@+id/free_home"/>
 
         <LinearLayout
@@ -37,7 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/top_text"
-            android:background="@color/main"/>
+            android:background="@color/main"
+            android:orientation="horizontal" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,7 +59,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="35dp"
-                    android:background="@drawable/circle_nocolor"
+                    android:background="@drawable/circle_color"
                     android:layout_centerHorizontal="true"/>
 
                 <TextView
@@ -95,7 +97,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="35dp"
-                    android:background="@drawable/circle_nocolor"
+                    android:background="@drawable/circle_color"
                     android:layout_centerHorizontal="true"/>
 
                 <TextView
