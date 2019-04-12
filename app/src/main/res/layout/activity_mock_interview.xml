@@ -17,7 +17,7 @@
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="모의 면접"
+            android:text="모의 면접!"
             android:textSize="20dp"
             android:padding="15dp"
             android:textColor="@color/main"
@@ -59,7 +59,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="35dp"
-                    android:background="@drawable/circle_color"
+                    android:background="@drawable/circle_nocolor"
                     android:layout_centerHorizontal="true"/>
 
                 <TextView
