@@ -33,7 +33,7 @@
             android:layout_marginTop="8dp"
             android:id="@+id/free_home"/>
 
-        <LinearLayout
+        <View
             android:id="@+id/line"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/under_line">
+                android:background="@color/main">
 
                 <Button
                     android:id="@+id/mock_btn"
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:text="직종별"
-                    android:textColor="@color/main"
+                    android:textColor="#ffffff"
                     android:textSize="40dp"
                     android:layout_below="@+id/mock_btn"
                     android:layout_centerHorizontal="true"/>
@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:text="원하는 직종에 맞는 질문을 제공합니다."
-                    android:textColor="@color/main"
+                    android:textColor="#FFFFFF"
                     android:textSize="15dp"
                     android:layout_below="@+id/mock_text"
                     android:layout_centerHorizontal="true"/>
