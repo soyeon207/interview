@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/under_line"
         android:padding="15dp"
-        android:text="!SIGN UP!"
+        android:text="SIGN UP"
+
         android:textAlignment="center"
         android:textColor="#AF3421"
         android:textSize="20dp"
@@ -44,6 +45,7 @@
             android:textColor="#AF3421"
             />
         <EditText
+            android:textColor="#AF3421"
             android:background="@drawable/under_line"
             android:id="@+id/name"
             android:layout_width="match_parent"
@@ -68,6 +70,7 @@
             android:textColor="#AF3421"
             />
         <EditText
+            android:textColor="#AF3421"
             android:background="@drawable/under_line"
             android:id="@+id/nick"
             android:layout_width="match_parent"
@@ -104,6 +107,7 @@
             >
 
             <EditText
+                android:textColor="#AF3421"
                 android:background="@drawable/under_line"
                 android:id="@+id/id"
                 android:layout_marginLeft="30dp"
@@ -143,6 +147,7 @@
             android:textColor="#AF3421"
             />
         <EditText
+            android:textColor="#AF3421"
             android:background="@drawable/under_line"
             android:id="@+id/passwd"
             android:layout_width="match_parent"
