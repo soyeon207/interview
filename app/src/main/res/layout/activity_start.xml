@@ -262,11 +262,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#0078d7"
+                        android:background="@drawable/under_line"
                         android:padding="15dp"
                         android:text="커뮤니티"
                         android:textAlignment="center"
-                        android:textColor="#ffffff"
+                        android:textColor="#AF3421"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -278,7 +278,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="8dp"
-                        android:background="@drawable/write_icon" />
+                        android:background="@drawable/add" />
 
                 </RelativeLayout>
 
