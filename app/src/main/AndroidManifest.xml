@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="s2017s06.kr.hs.mirim.interview">
+
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -16,7 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".mock_type"></activity>
+        <activity android:name=".mock_type" />
         <activity android:name=".mock_select" />
         <activity
             android:name=".SplashActivity"
@@ -46,6 +47,7 @@
         <activity
             android:name=".post"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".free_q"></activity>
     </application>
 
 </manifest>

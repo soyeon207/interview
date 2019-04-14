@@ -3,6 +3,7 @@ package s2017s06.kr.hs.mirim.interview;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,6 +21,8 @@ public class FreeInterview extends AppCompatActivity {
     Button btnAdd;
     EditText addText;
     String id,pwd;
+    Button start;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +48,10 @@ public class FreeInterview extends AppCompatActivity {
         Items.add("좌우명이 뭔가요?");
         Items.add("마찰이 생긴다면 어떻게 대처할 건가요?");
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, Items);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, Items);
         listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(adapter);
-        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         addText = (EditText) findViewById(R.id.addText);
         btnAdd = (Button) findViewById(R.id.add);
@@ -62,6 +65,31 @@ public class FreeInterview extends AppCompatActivity {
                     addText.setText("");
                     adapter.notifyDataSetChanged();
                 }
+            }
+        });
+
+        start=findViewById(R.id.start);
+
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                SparseBooleanArray booleans = listView.getCheckedItemPositions();
+                String question = null;
+
+                for(int i = 0; i < Items.size(); i++){
+                    if(booleans.get(i)){
+                        question = Items.get(i);
+                    }
+                }
+
+                Intent intent = new Intent(getApplicationContext(), free_q.class);
+                intent.putExtra("Q", question);
+                intent.putExtra("id",id);
+                intent.putExtra("passwd",pwd);
+                startActivity(intent);
+
+
             }
         });
 
