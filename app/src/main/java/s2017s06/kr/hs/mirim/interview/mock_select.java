@@ -1,13 +1,141 @@
 package s2017s06.kr.hs.mirim.interview;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class mock_select extends AppCompatActivity {
+    String id, pwd, mock;
+    LinearLayout type, company;
+    LinearLayout app, con, webD, web, data, UiUx, webP, DB, etc, office;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mock_select);
+
+        Intent intent = getIntent();
+        id = intent.getStringExtra("id_mock");
+        pwd = intent.getStringExtra("pwd_mock");
+        mock = intent.getStringExtra("mock");
+
+        ImageView free_home = findViewById(R.id.free_home);
+        free_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                intent.putExtra("id", id);
+                intent.putExtra("passwd", pwd);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        type = findViewById(R.id.type);
+
+        if(mock.equals("type")){
+            type.setVisibility(View.VISIBLE);
+            company.setVisibility(View.GONE);
+        } else if(mock.equals("company")){
+            company.setVisibility(View.VISIBLE);
+            type.setVisibility(View.GONE);
+        }
+
+        View.OnClickListener changeActivity = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String type = "";
+
+                switch (view.getId()){
+                    case R.id.mock_app:
+                        type = "app";
+                        break;
+
+                    case R.id.mock_content:
+                        type = "con";
+                        break;
+
+                    case R.id.mock_webD:
+                        type = "webD";
+                        break;
+
+                    case R.id.mock_web:
+                        type = "web";
+                        break;
+
+                    case R.id.mock_data:
+                        type = "data";
+                        break;
+
+                    case R.id.mock_UiUx:
+                        type = "UiUx";
+                        break;
+
+                    case R.id.mock_webP:
+                        type = "webP";
+                        break;
+
+                    case R.id.mock_DB:
+                        type = "DB";
+                        break;
+
+                    case R.id.mock_etc:
+                        type = "etc";
+                        break;
+
+                    case R.id.mock_office:
+                        type = "ofice";
+                        break;
+                }
+
+                Intent intent = null;
+
+                if(mock.equals("type"))
+                     intent = new Intent(getApplicationContext(), mock_type.class);
+                else if(mock.equals("company"))
+                    intent = new Intent(getApplicationContext(), mock_type.class);
+
+                intent.putExtra("id", id);
+                intent.putExtra("passwd", pwd);
+                intent.putExtra("type", type);
+                startActivity(intent);
+                finish();
+            }
+        };
+
+        app = findViewById(R.id.mock_app);
+        app.setOnClickListener(changeActivity);
+
+        con = findViewById(R.id.mock_content);
+        app.setOnClickListener(changeActivity);
+
+        webD = findViewById(R.id.mock_webD);
+        webD.setOnClickListener(changeActivity);
+
+        web = findViewById(R.id.mock_web);
+        web.setOnClickListener(changeActivity);
+
+        data = findViewById(R.id.mock_data);
+        data.setOnClickListener(changeActivity);
+
+        UiUx = findViewById(R.id.mock_UiUx);
+        UiUx.setOnClickListener(changeActivity);
+
+        webP = findViewById(R.id.mock_webP);
+        webP.setOnClickListener(changeActivity);
+
+        DB = findViewById(R.id.mock_DB);
+        DB.setOnClickListener(changeActivity);
+
+        etc = findViewById(R.id.mock_etc);
+        etc.setOnClickListener(changeActivity);
+
+        office  = findViewById(R.id.mock_office);
+        office.setOnClickListener(changeActivity);
     }
 }

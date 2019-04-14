@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mock_type">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/under_line">
+
+        <TextView
+            android:id="@+id/top_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="15dp"
+            android:text="모의 면접"
+            android:textAlignment="center"
+            android:textColor="@color/main"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/free_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/home_icon" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/top_text"
+            android:background="@color/main"
+            android:orientation="horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/line">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/camera"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button"
+                android:text="카메라"
+                android:textColor="#ffffff"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/btn_end"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button"
+                android:text="끝내기"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button"
+                android:text="다음 질문"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

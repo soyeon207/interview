@@ -1,36 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mock_select">
+    android:orientation="vertical"
+    tools:context="s2017s06.kr.hs.mirim.interview.MockInterview">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/under_line">
 
-    <TextView
-        android:id="@+id/top_text"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="모의 면접"
-        android:textSize="20dp"
-        android:padding="15dp"
-        android:textColor="@color/main"
-        android:textAlignment="center"
-        android:background="#ffffff"/>
+        <TextView
+            android:id="@+id/top_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="15dp"
+            android:text="모의 면접"
+            android:textAlignment="center"
+            android:textColor="@color/main"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/home_icon"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:id="@+id/free_home"/>
+        <ImageView
+            android:id="@+id/free_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/home_icon" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/top_text"
+            android:background="@color/main"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/line"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/mock_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="APP 개발"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mock_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="CONTENT 디자인"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/mock_webD"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="WEB 디자인"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mock_web"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="WEB 개발"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/mock_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="정보 시스템 / 보안"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mock_UiUx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="UI/UX 디자인"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/mock_webP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="WEB PUBLISHING"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mock_DB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="DATEBASE"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/mock_etc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="기획 / 테스팅"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mock_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:text="사무직"
+                        android:textColor="@color/main"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
