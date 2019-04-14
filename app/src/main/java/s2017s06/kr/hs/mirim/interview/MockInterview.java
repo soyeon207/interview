@@ -45,7 +45,7 @@ public class MockInterview extends AppCompatActivity {
         });
 
         RelativeLayout company = findViewById(R.id.company);
-        type.setOnClickListener(new View.OnClickListener() {
+        company.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), mock_select.class);
