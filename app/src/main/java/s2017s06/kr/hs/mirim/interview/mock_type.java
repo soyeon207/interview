@@ -16,6 +16,7 @@ import java.util.Random;
 
 public class mock_type extends AppCompatActivity {
     String id, pwd, type;
+    String mock = "type";
 
     private Button camera;
     private Button next;
@@ -158,9 +159,9 @@ public class mock_type extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(), mock_select.class);
                 startActivity(intent);
-                intent.putExtra("id", id);
-                intent.putExtra("passwd", pwd);
-                intent.putExtra("type", type);
+                intent.putExtra("id_mock", id);
+                intent.putExtra("pwd_mock", pwd);
+                intent.putExtra("mock", mock);
                 finish();
             }
         });

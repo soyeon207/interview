@@ -40,10 +40,10 @@ public class mock_select extends AppCompatActivity {
         type = findViewById(R.id.type);
         company = findViewById(R.id.company);
 
-        if(mock.equals("type")){
+        if(mock == "type"){
             type.setVisibility(View.VISIBLE);
             company.setVisibility(View.GONE);
-        } else if(mock.equals("company")){
+        } else if(mock == "company"){
             company.setVisibility(View.VISIBLE);
             type.setVisibility(View.GONE);
         }
@@ -97,20 +97,21 @@ public class mock_select extends AppCompatActivity {
 
                 Intent intent = null;
 
-                if(mock.equals("type"))
+                if(mock == "type")
                      intent = new Intent(getApplicationContext(), mock_type.class);
-                else if(mock.equals("company"))
+                else if(mock == "company")
                     intent = new Intent(getApplicationContext(), mock_type.class);
 
                 intent.putExtra("id", id);
                 intent.putExtra("passwd", pwd);
+                intent.putExtra("mock", mock);
                 intent.putExtra("type", type);
                 startActivity(intent);
                 finish();
             }
         };
 
-        if(mock.equals("type")){
+        if(mock == "type"){
             app = (RelativeLayout)findViewById(R.id.mock_app);
             app.setOnClickListener(changeActivity);
 

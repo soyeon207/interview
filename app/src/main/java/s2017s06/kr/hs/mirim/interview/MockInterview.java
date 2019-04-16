@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class MockInterview extends AppCompatActivity {
-    String id, pwd;
+    String id, pwd, select;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +35,11 @@ public class MockInterview extends AppCompatActivity {
         type.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                select = "type";
                 Intent intent = new Intent(getApplicationContext(), mock_select.class);
                 intent.putExtra("id", id);
                 intent.putExtra("passwd", pwd);
-                intent.putExtra("mock", "type");
+                intent.putExtra("mock", select);
                 startActivity(intent);
                 finish();
             }
@@ -48,10 +49,11 @@ public class MockInterview extends AppCompatActivity {
         company.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                select = "company";
                 Intent intent = new Intent(getApplicationContext(), mock_select.class);
                 intent.putExtra("id", id);
                 intent.putExtra("passwd", pwd);
-                intent.putExtra("mock", "type");
+                intent.putExtra("mock", select);
                 startActivity(intent);
                 finish();
             }
