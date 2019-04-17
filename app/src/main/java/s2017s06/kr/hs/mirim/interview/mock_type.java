@@ -39,8 +39,8 @@ public class mock_type extends AppCompatActivity {
         setContentView(R.layout.activity_mock_type);
 
         Intent intent = getIntent();
-        id = intent.getStringExtra("id_mock");
-        pwd = intent.getStringExtra("pwd_mock");
+        id = intent.getStringExtra("id");
+        pwd = intent.getStringExtra("pwd");
         type = intent.getStringExtra("type");
 
         ImageView free_home = findViewById(R.id.free_home);
@@ -49,7 +49,7 @@ public class mock_type extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StartActivity.class);
                 intent.putExtra("id", id);
-                intent.putExtra("passwd", pwd);
+                intent.putExtra("pwd", pwd);
                 startActivity(intent);
                 finish();
             }
@@ -159,8 +159,8 @@ public class mock_type extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(), mock_select.class);
                 startActivity(intent);
-                intent.putExtra("id_mock", id);
-                intent.putExtra("pwd_mock", pwd);
+                intent.putExtra("id", id);
+                intent.putExtra("pwd", pwd);
                 intent.putExtra("mock", mock);
                 finish();
             }

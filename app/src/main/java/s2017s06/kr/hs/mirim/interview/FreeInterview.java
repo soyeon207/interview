@@ -30,8 +30,8 @@ public class FreeInterview extends AppCompatActivity {
         setContentView(R.layout.activity_free_interview);
 
         Intent intent = getIntent();
-        id = intent.getStringExtra("id_free");
-        pwd = intent.getStringExtra("pwd_free");
+        id = intent.getStringExtra("id");
+        pwd = intent.getStringExtra("pwd");
 
         ImageView free_home=findViewById(R.id.free_home);
         free_home.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +39,7 @@ public class FreeInterview extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(), StartActivity.class);
                 intent.putExtra("id",id);
-                intent.putExtra("passwd",pwd);
+                intent.putExtra("pwd",pwd);
                 startActivity(intent);
             }
         });
@@ -86,7 +86,7 @@ public class FreeInterview extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), free_q.class);
                 intent.putExtra("Q", question);
                 intent.putExtra("id",id);
-                intent.putExtra("passwd",pwd);
+                intent.putExtra("pwd",pwd);
                 startActivity(intent);
 
 

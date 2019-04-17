@@ -57,8 +57,8 @@ public class ListContent extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        id_board=intent.getStringExtra("id_board");
-        pwd_board=intent.getStringExtra("passwd_board");
+        id_board=intent.getStringExtra("id");
+        pwd_board=intent.getStringExtra("pwd");
 
         title = intent.getStringExtra("title");
         content2 = intent.getStringExtra("content2");
@@ -112,7 +112,7 @@ public class ListContent extends AppCompatActivity {
                 Intent intent = new Intent(getApplication(),StartActivity.class);
 
                 intent.putExtra("id",id_board);
-                intent.putExtra("passwd",pwd_board);
+                intent.putExtra("pwd",pwd_board);
 
                 startActivity(intent);
 
