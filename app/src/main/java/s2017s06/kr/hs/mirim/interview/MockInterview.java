@@ -16,8 +16,8 @@ public class MockInterview extends AppCompatActivity {
         setContentView(R.layout.activity_mock_interview);
 
         Intent intent = getIntent();
-        id = intent.getStringExtra("id_mock");
-        pwd = intent.getStringExtra("pwd_mock");
+        id = intent.getStringExtra("id");
+        pwd = intent.getStringExtra("pwd");
 
         ImageView free_home = findViewById(R.id.free_home);
         free_home.setOnClickListener(new View.OnClickListener() {
@@ -25,7 +25,7 @@ public class MockInterview extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StartActivity.class);
                 intent.putExtra("id", id);
-                intent.putExtra("passwd", pwd);
+                intent.putExtra("pwd", pwd);
                 startActivity(intent);
                 finish();
             }
@@ -37,7 +37,7 @@ public class MockInterview extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), mock_select.class);
                 intent.putExtra("id", id);
-                intent.putExtra("passwd", pwd);
+                intent.putExtra("pwd", pwd);
                 intent.putExtra("mock", "type");
                 startActivity(intent);
                 finish();
@@ -50,7 +50,7 @@ public class MockInterview extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), mock_select.class);
                 intent.putExtra("id", id);
-                intent.putExtra("passwd", pwd);
+                intent.putExtra("pwd", pwd);
                 intent.putExtra("mock", "type");
                 startActivity(intent);
                 finish();

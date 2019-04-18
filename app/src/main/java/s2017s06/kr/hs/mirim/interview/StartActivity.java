@@ -132,8 +132,8 @@ public class StartActivity extends TabActivity {
                             intent.putExtra("content2",message.getValue().toString());
                             intent.putExtra("title",list_itemArrayList.get(positions).getTitle());
                             intent.putExtra("nick",list_itemArrayList.get(positions).getNickname());
-                            intent.putExtra("id_board",id2);
-                            intent.putExtra("passwd_board",pwd2);
+                            intent.putExtra("id",id2);
+                            intent.putExtra("pwd",pwd2);
                             startActivity(intent);
                         }
                     }
