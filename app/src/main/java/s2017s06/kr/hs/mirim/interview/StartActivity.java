@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -37,7 +38,7 @@ public class StartActivity extends TabActivity {
     RelativeLayout Mock,Free;
     TextView exit_btn;
     ImageView write;
-    String pwd2,id2;
+    String id,pwd;
     int positions;
     ListView listView;
     MyListAdapter myListAdapter;
@@ -49,6 +50,10 @@ public class StartActivity extends TabActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        Intent intent = getIntent();
+        id =intent.getStringExtra("id");
+        pwd=intent.getStringExtra("pwd");
 
         tip_1 = findViewById(R.id.tip_btn1);
         tip_2 = findViewById(R.id.tip_btn2);
@@ -78,9 +83,6 @@ public class StartActivity extends TabActivity {
             }
         });
 
-        Intent intent = getIntent();
-        id2 =intent.getStringExtra("id");
-        pwd2=intent.getStringExtra("pwd");
 
         listView = findViewById(R.id.start_listview);
         list_itemArrayList = new ArrayList<list_item>();
@@ -132,8 +134,8 @@ public class StartActivity extends TabActivity {
                             intent.putExtra("content2",message.getValue().toString());
                             intent.putExtra("title",list_itemArrayList.get(positions).getTitle());
                             intent.putExtra("nick",list_itemArrayList.get(positions).getNickname());
-                            intent.putExtra("id_board",id2);
-                            intent.putExtra("passwd_board",pwd2);
+                            intent.putExtra("id_board",id);
+                            intent.putExtra("passwd_board",pwd);
                             startActivity(intent);
                         }
                     }
@@ -151,8 +153,8 @@ public class StartActivity extends TabActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(),MockInterview.class);
-                intent.putExtra("id",id2);
-                intent.putExtra("pwd",pwd2);
+                intent.putExtra("id",id);
+                intent.putExtra("pwd",pwd);
                 startActivity(intent);
             }
         });
@@ -161,8 +163,8 @@ public class StartActivity extends TabActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(),FreeInterview.class);
-                intent.putExtra("id",id2);
-                intent.putExtra("pwd",pwd2);
+                intent.putExtra("id",id);
+                intent.putExtra("pwd",pwd);
                 startActivity(intent);
             }
         });
@@ -173,8 +175,8 @@ public class StartActivity extends TabActivity {
 
                 Intent intent = new Intent(getApplication(),write.class);
 
-                intent.putExtra("id",id2);
-                intent.putExtra("pwd",pwd2);
+                intent.putExtra("id",id);
+                intent.putExtra("pwd",pwd);
 
                 startActivity(intent);
 
@@ -200,7 +202,7 @@ public class StartActivity extends TabActivity {
                                 FirebaseDatabase mdatabase_remove = FirebaseDatabase.getInstance();
                                 DatabaseReference mdatabaseRef_remove = mdatabase_remove.getReference("user");
 
-                                mdatabaseRef_remove.child(id2).addValueEventListener(new ValueEventListener() {
+                                mdatabaseRef_remove.child(id).addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(DataSnapshot dataSnapshot) {
                                         for(DataSnapshot message:dataSnapshot.getChildren()){
@@ -221,7 +223,7 @@ public class StartActivity extends TabActivity {
                                     @Override
                                     public void onDataChange(DataSnapshot dataSnapshot) {
                                         for(DataSnapshot remove_id:dataSnapshot.getChildren()){
-                                            if(remove_id.getValue().toString().equals(id2)){
+                                            if(remove_id.getValue().toString().equals(id)){
                                                 remove_id.getRef().removeValue();
                                             }
                                         }
@@ -250,7 +252,7 @@ public class StartActivity extends TabActivity {
         FirebaseDatabase list = FirebaseDatabase.getInstance();
         DatabaseReference listRef = list.getReference("user");
 
-        listRef.child(id2).child("nick").addValueEventListener(new ValueEventListener() {
+        listRef.child(id).child("nick").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot message:dataSnapshot.getChildren()){

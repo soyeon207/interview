@@ -33,8 +33,6 @@ public class post extends AppCompatActivity {
 
         back_post = findViewById(R.id.back_post);
 
-
-
         Intent intent = getIntent();
         post_id=intent.getStringExtra("id");
         post_pwd=intent.getStringExtra("pwd");

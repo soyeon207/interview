@@ -3,6 +3,7 @@ package s2017s06.kr.hs.mirim.interview;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -54,8 +55,6 @@ public class ListContent extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,new ArrayList<String>());
         reply_list.setAdapter(adapter);
 
-
-
         Intent intent = getIntent();
         id_board=intent.getStringExtra("id");
         pwd_board=intent.getStringExtra("pwd");
@@ -84,9 +83,6 @@ public class ListContent extends AppCompatActivity {
 
                 }
             });
-
-
-
 
         con_content = findViewById(R.id.content_con);
         con_nick = findViewById(R.id.content_nick);

@@ -124,8 +124,8 @@
                 android:padding="10dp"
                 android:text="중복 체크"
                 android:layout_marginTop="5dp"
-                android:textColor="#AF3421"
-                android:background="#ffffff"
+                android:textColor="#ffffff"
+                android:background="@color/colorMain"
 
                 />
 
