@@ -40,16 +40,12 @@ public class mock_select extends AppCompatActivity {
         type = findViewById(R.id.type);
         company = findViewById(R.id.company);
 
-        if(mock != null){
-            if(mock.equals("type")){
-                type.setVisibility(View.VISIBLE);
-                company.setVisibility(View.GONE);
-            } else if(mock.equals("company")){
-                company.setVisibility(View.VISIBLE);
-                type.setVisibility(View.GONE);
-            }
-        } else {
+        if(mock.equals("type")){
             type.setVisibility(View.VISIBLE);
+            company.setVisibility(View.GONE);
+        } else if(mock.equals("company")){
+            company.setVisibility(View.VISIBLE);
+            type.setVisibility(View.GONE);
         }
 
         View.OnClickListener changeActivity = new View.OnClickListener() {
@@ -114,38 +110,36 @@ public class mock_select extends AppCompatActivity {
             }
         };
 
-        if(mock != null){
-            if(mock.equals("type")){
-                app = (RelativeLayout)findViewById(R.id.mock_app);
-                app.setOnClickListener(changeActivity);
+        if(mock.equals("type")){
+            app = (RelativeLayout)findViewById(R.id.mock_app);
+            app.setOnClickListener(changeActivity);
 
-                con = (RelativeLayout)findViewById(R.id.mock_content);
-                app.setOnClickListener(changeActivity);
+            con = (RelativeLayout)findViewById(R.id.mock_content);
+            app.setOnClickListener(changeActivity);
 
-                webD = (RelativeLayout)findViewById(R.id.mock_webD);
-                webD.setOnClickListener(changeActivity);
+            webD = (RelativeLayout)findViewById(R.id.mock_webD);
+            webD.setOnClickListener(changeActivity);
 
-                web = (RelativeLayout)findViewById(R.id.mock_web);
-                web.setOnClickListener(changeActivity);
+            web = (RelativeLayout)findViewById(R.id.mock_web);
+            web.setOnClickListener(changeActivity);
 
-                data = (RelativeLayout)findViewById(R.id.mock_data);
-                data.setOnClickListener(changeActivity);
+            data = (RelativeLayout)findViewById(R.id.mock_data);
+            data.setOnClickListener(changeActivity);
 
-                UiUx = (RelativeLayout)findViewById(R.id.mock_UiUx);
-                UiUx.setOnClickListener(changeActivity);
+            UiUx = (RelativeLayout)findViewById(R.id.mock_UiUx);
+            UiUx.setOnClickListener(changeActivity);
 
-                webP = (RelativeLayout)findViewById(R.id.mock_webP);
-                webP.setOnClickListener(changeActivity);
+            webP = (RelativeLayout)findViewById(R.id.mock_webP);
+            webP.setOnClickListener(changeActivity);
 
-                DB = (RelativeLayout)findViewById(R.id.mock_DB);
-                DB.setOnClickListener(changeActivity);
+            DB = (RelativeLayout)findViewById(R.id.mock_DB);
+            DB.setOnClickListener(changeActivity);
 
-                etc = (RelativeLayout)findViewById(R.id.mock_etc);
-                etc.setOnClickListener(changeActivity);
+            etc = (RelativeLayout)findViewById(R.id.mock_etc);
+            etc.setOnClickListener(changeActivity);
 
-                office  = (RelativeLayout)findViewById(R.id.mock_office);
-                office.setOnClickListener(changeActivity);
-            }
+            office  = (RelativeLayout)findViewById(R.id.mock_office);
+            office.setOnClickListener(changeActivity);
         }
     }
 }

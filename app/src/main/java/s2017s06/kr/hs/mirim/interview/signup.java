@@ -89,7 +89,7 @@ public class signup extends AppCompatActivity {
 
                     Intent intent = new Intent(getApplication(),StartActivity.class);
                      intent.putExtra("id",room);
-                     intent.putExtra("passwd",passwd.getText().toString());
+                     intent.putExtra("pwd",passwd.getText().toString());
                     startActivity(intent);
 
             }

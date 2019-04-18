@@ -82,7 +82,7 @@ public class login extends AppCompatActivity {
                                     c.passwordcheck=1;
                                     Intent intent = new Intent(getApplicationContext(), StartActivity.class);
                                     intent.putExtra("id",loginid.getText().toString());
-                                    intent.putExtra("passwd",loginpwd.getText().toString());
+                                    intent.putExtra("pwd",loginpwd.getText().toString());
                                     startActivity(intent);
                                 }
                             }

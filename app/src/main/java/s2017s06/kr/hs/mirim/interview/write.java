@@ -27,8 +27,8 @@ public class write extends AppCompatActivity {
         setContentView(R.layout.activity_write);
 
         Intent intent = getIntent();
-        id_board=intent.getStringExtra("id_board");
-        pwd_board=intent.getStringExtra("passwd_board");
+        id_board=intent.getStringExtra("id");
+        pwd_board=intent.getStringExtra("pwd");
 
 
         back_icon = findViewById(R.id.back);
@@ -38,7 +38,7 @@ public class write extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(),StartActivity.class);
                 intent.putExtra("id",id_board);
-                intent.putExtra("passwd",pwd_board);
+                intent.putExtra("pwd",pwd_board);
                 startActivity(intent);
             }
         });
@@ -62,7 +62,7 @@ public class write extends AppCompatActivity {
                 Toast.makeText(getApplication(),"성공적으로 게시 되었습니다",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplication(),StartActivity.class);
                 intent.putExtra("id",id_board);
-                intent.putExtra("passwd",pwd_board);
+                intent.putExtra("pwd",pwd_board);
                 startActivity(intent);
             }
         });

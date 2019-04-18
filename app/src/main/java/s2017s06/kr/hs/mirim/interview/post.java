@@ -37,7 +37,7 @@ public class post extends AppCompatActivity {
 
         Intent intent = getIntent();
         post_id=intent.getStringExtra("id");
-        post_pwd=intent.getStringExtra("passwd");
+        post_pwd=intent.getStringExtra("pwd");
 
 
         back_post.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +47,7 @@ public class post extends AppCompatActivity {
                 Intent intent = new Intent(getApplication(),StartActivity.class);
 
                 intent.putExtra("id",post_id);
-                intent.putExtra("passwd",post_pwd);
+                intent.putExtra("pwd",post_pwd);
 
                 startActivity(intent);
             }

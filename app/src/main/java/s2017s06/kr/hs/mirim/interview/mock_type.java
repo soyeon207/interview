@@ -160,7 +160,7 @@ public class mock_type extends AppCompatActivity {
                 startActivity(intent);
                 intent.putExtra("id", id);
                 intent.putExtra("passwd", pwd);
-                intent.putExtra("mock", "type");
+                intent.putExtra("type", type);
                 finish();
             }
         });

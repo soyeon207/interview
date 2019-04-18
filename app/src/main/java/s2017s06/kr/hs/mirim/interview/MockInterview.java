@@ -51,7 +51,7 @@ public class MockInterview extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), mock_select.class);
                 intent.putExtra("id", id);
                 intent.putExtra("passwd", pwd);
-                intent.putExtra("mock", "company");
+                intent.putExtra("mock", "type");
                 startActivity(intent);
                 finish();
             }

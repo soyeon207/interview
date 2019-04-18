@@ -80,7 +80,7 @@ public class StartActivity extends TabActivity {
 
         Intent intent = getIntent();
         id2 =intent.getStringExtra("id");
-        pwd2=intent.getStringExtra("passwd");
+        pwd2=intent.getStringExtra("pwd");
 
         listView = findViewById(R.id.start_listview);
         list_itemArrayList = new ArrayList<list_item>();
@@ -151,8 +151,8 @@ public class StartActivity extends TabActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(),MockInterview.class);
-                intent.putExtra("id_mock",id2);
-                intent.putExtra("pwd_mock",pwd2);
+                intent.putExtra("id",id2);
+                intent.putExtra("pwd",pwd2);
                 startActivity(intent);
             }
         });
@@ -161,8 +161,8 @@ public class StartActivity extends TabActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(),FreeInterview.class);
-                intent.putExtra("id_free",id2);
-                intent.putExtra("pwd_free",pwd2);
+                intent.putExtra("id",id2);
+                intent.putExtra("pwd",pwd2);
                 startActivity(intent);
             }
         });
@@ -173,8 +173,8 @@ public class StartActivity extends TabActivity {
 
                 Intent intent = new Intent(getApplication(),write.class);
 
-                intent.putExtra("id_board",id2);
-                intent.putExtra("passwd_board",pwd2);
+                intent.putExtra("id",id2);
+                intent.putExtra("pwd",pwd2);
 
                 startActivity(intent);
 
