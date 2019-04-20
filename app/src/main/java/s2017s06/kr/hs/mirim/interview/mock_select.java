@@ -52,6 +52,7 @@ public class mock_select extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String type = "";
+                String company = "";
 
                 switch (view.getId()){
                     case R.id.mock_app:
@@ -100,11 +101,12 @@ public class mock_select extends AppCompatActivity {
                 if(mock.equals("type"))
                      intent = new Intent(getApplicationContext(), mock_type.class);
                 else if(mock.equals("company"))
-                    intent = new Intent(getApplicationContext(), mock_type.class);
+                    intent = new Intent(getApplicationContext(), mock_company.class);
 
                 intent.putExtra("id", id);
                 intent.putExtra("pwd", pwd);
                 intent.putExtra("type", type);
+                intent.putExtra("company", company);
                 startActivity(intent);
                 finish();
             }
