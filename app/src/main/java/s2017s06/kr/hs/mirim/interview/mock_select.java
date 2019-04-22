@@ -40,12 +40,13 @@ public class mock_select extends AppCompatActivity {
         type = findViewById(R.id.type);
         company = findViewById(R.id.company);
 
+        company.setVisibility(View.GONE);
+        type.setVisibility(View.GONE);
+
         if(mock == "type"){
             type.setVisibility(View.VISIBLE);
-            company.setVisibility(View.GONE);
         } else if(mock == "company"){
             company.setVisibility(View.VISIBLE);
-            type.setVisibility(View.GONE);
         }
 
         View.OnClickListener changeActivity = new View.OnClickListener() {
