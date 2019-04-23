@@ -40,6 +40,7 @@ public class mock_select extends AppCompatActivity {
         type = findViewById(R.id.type);
         company = findViewById(R.id.company);
 
+        //여기서부터 코드 실행이 되지 않는 것 같음.
         company.setVisibility(View.GONE);
         type.setVisibility(View.GONE);
 
