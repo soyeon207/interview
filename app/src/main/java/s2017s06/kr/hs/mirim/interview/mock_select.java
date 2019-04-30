@@ -102,6 +102,10 @@ public class mock_select extends AppCompatActivity {
             }
         };
 
+        text = findViewById(R.id.text_mock1);
+        text.setText(mock);
+
+        //if절 안으로 들어가지 않는 듯함. 위의 setText는 적용이 되지만 아래부터는 안되고 있을 가능성이 다분.
         if(mock == "type"){
             mock1 = (RelativeLayout)findViewById(R.id.mock1);
             text = findViewById(R.id.text_mock1);
