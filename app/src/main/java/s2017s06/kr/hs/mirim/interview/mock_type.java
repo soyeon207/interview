@@ -157,10 +157,11 @@ public class mock_type extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(), mock_select.class);
-                startActivity(intent);
                 intent.putExtra("id", id);
                 intent.putExtra("pwd", pwd);
+                intent.putExtra("mock", "type");
                 intent.putExtra("type", type);
+                startActivity(intent);
                 finish();
             }
         });
