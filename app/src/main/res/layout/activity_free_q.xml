@@ -52,6 +52,7 @@
             android:gravity="center"
             android:textSize="25dp" />
 
+        <!-- 카메라 화면을 직접 띄울 수 있도록 수정할 곳 -->
         <Button
             android:id="@+id/camera"
             android:layout_width="150dp"
