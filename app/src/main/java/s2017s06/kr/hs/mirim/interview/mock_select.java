@@ -69,21 +69,7 @@ public class mock_select extends AppCompatActivity {
                         if(mock == "type") type = "UiUx";
                         break;
 
-                    case R.id.mock7:
-                        if(mock == "type") type = "webP";
-                        break;
 
-                    case R.id.mock8:
-                        if(mock == "type") type = "DB";
-                        break;
-
-                    case R.id.mock9:
-                        if(mock == "type") type = "etc";
-                        break;
-
-                    case R.id.mock10:
-                        if(mock == "type") type = "ofice";
-                        break;
                 }
 
                 Intent intent = null;
@@ -137,25 +123,7 @@ public class mock_select extends AppCompatActivity {
                 text.setText("UI/UX 디자인");
                 mock6.setOnClickListener(changeActivity);
 
-                mock7 = (RelativeLayout)findViewById(R.id.mock7);
-                text = findViewById(R.id.text_mock7);
-                text.setText("WEB PUBLISHING");
-                mock7.setOnClickListener(changeActivity);
 
-                mock8 = (RelativeLayout)findViewById(R.id.mock8);
-                text = findViewById(R.id.text_mock8);
-                text.setText("DATEBASE");
-                mock8.setOnClickListener(changeActivity);
-
-                mock9 = (RelativeLayout)findViewById(R.id.mock9);
-                text = findViewById(R.id.text_mock9);
-                text.setText("기획 / 테스팅");
-                mock9.setOnClickListener(changeActivity);
-
-                mock10 = (RelativeLayout)findViewById(R.id.mock10);
-                text = findViewById(R.id.text_mock10);
-                text.setText("사무직");
-                mock10.setOnClickListener(changeActivity);
 
                 break;
 
@@ -190,25 +158,6 @@ public class mock_select extends AppCompatActivity {
                 text.setText("UI/UX 디자인");
                 mock6.setOnClickListener(changeActivity);
 
-                mock7 = (RelativeLayout)findViewById(R.id.mock7);
-                text = findViewById(R.id.text_mock7);
-                text.setText("WEB PUBLISHING");
-                mock7.setOnClickListener(changeActivity);
-
-                mock8 = (RelativeLayout)findViewById(R.id.mock8);
-                text = findViewById(R.id.text_mock8);
-                text.setText("DATEBASE");
-                mock8.setOnClickListener(changeActivity);
-
-                mock9 = (RelativeLayout)findViewById(R.id.mock9);
-                text = findViewById(R.id.text_mock9);
-                text.setText("기획 / 테스팅");
-                mock9.setOnClickListener(changeActivity);
-
-                mock10 = (RelativeLayout)findViewById(R.id.mock10);
-                text = findViewById(R.id.text_mock10);
-                text.setText("사무직");
-                mock10.setOnClickListener(changeActivity);
 
                 break;
         }

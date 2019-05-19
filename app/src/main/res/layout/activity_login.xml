@@ -14,7 +14,6 @@
         android:layout_height="90dp"
         android:src="@drawable/logo"
         android:layout_marginTop="15dp"
-
         />
 
 <RelativeLayout
@@ -33,16 +32,18 @@
         android:layout_marginTop="10dp"
         android:hint="   ID"
         android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#AF3421"
+        android:textColor="#404040"
+        android:textColorHint="#404040"
         android:background="@drawable/under_line"
         android:padding="10dp"
+        android:textStyle="bold"
         android:drawableStart="@drawable/ic_face_black_24dp"
         android:drawableLeft="@drawable/ic_face_black_24dp"
 
         />
 
     <EditText
+        android:textStyle="bold"
         android:background="@drawable/under_line"
         android:layout_below="@id/loginid"
         android:id="@+id/loginpwd"
@@ -50,12 +51,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:hint="   Password"
         android:inputType="textPassword"
-        android:textColorHint="#AF3421"
+        android:textColorHint="#404040"
         android:padding="10dp"
-        android:textColor="#000000"
+        android:textColor="#404040"
         android:drawableStart="@drawable/ic_https_black_24dp"
         android:drawableLeft="@drawable/ic_https_black_24dp"
         />
@@ -66,21 +67,11 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:progressTint="#AF3421" />
+        android:progressTint="#FDCB31" />
 
 </RelativeLayout>
 
-    <TextView
-        android:id="@+id/loginsignup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sign up"
-        android:textColor="#AF3421"
-        android:gravity="right"
-        android:layout_marginRight="20dp"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"
-        />
+
 
     <Button
         android:id="@+id/loginbt"
@@ -88,12 +79,22 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="15dp"
-        android:text="Login"
-        android:textColor="#ffffff"
+        android:layout_marginTop="35dp"
+        android:text="LOG IN"
+        android:textStyle="bold"
+        android:textColor="#404040"
         android:textSize="20dp"
         android:background="@drawable/button"
-        android:padding="15dp"
+        android:padding="13dp"
         />
-
+    <TextView
+        android:id="@+id/loginsignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Sign up"
+        android:textColor="#737373"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_marginTop="30dp"
+        />
 </LinearLayout>

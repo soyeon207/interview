@@ -13,11 +13,10 @@
         android:background="@drawable/under_line">
 
         <TextView
-            android:id="@+id/top_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
-            android:padding="15dp"
+            android:padding="20dp"
             android:text="모의 면접"
             android:textAlignment="center"
             android:textColor="@color/main"
@@ -41,14 +40,6 @@
             android:background="@color/main"
             android:orientation="horizontal" />
 
-        <!--<TextView
-            android:id="@+id/explain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/line"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:textSize="20dp" />-->
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -21,8 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class signup extends AppCompatActivity {
 
-    EditText name,nick,id,passwd,checkpasswd;
-    Button checkid;
+    EditText name,nick,id,passwd;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -37,45 +36,6 @@ public class signup extends AppCompatActivity {
          nick = findViewById(R.id.nick);
          id = findViewById(R.id.id);
          passwd = findViewById(R.id.passwd);
-        checkid = findViewById(R.id.checkid);
-
-        checkid.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-            FirebaseDatabase mdatabase = FirebaseDatabase.getInstance();
-            DatabaseReference mdatabaseRef = mdatabase.getReference("id");
-
-            mdatabaseRef.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    for(DataSnapshot messeage : dataSnapshot.getChildren()){
-                        String idcheck = messeage.getValue().toString();
-                       if(idcheck.equals(id.getText().toString())){
-                           id.setText("");
-
-                           new AlertDialog.Builder(signup.this)
-                                   .setTitle("알림")
-                                   .setMessage("이미 있는 아이디 입니다. 다른 아이디를 입력해주세요")
-                                   .setNeutralButton("닫기", new DialogInterface.OnClickListener() {
-                                       @Override
-                                       public void onClick(DialogInterface dialog, int which) {
-
-                                       }
-                                   }).show();
-                       id.setText("");
-                       }
-
-                    }
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-            }
-        });
 
         sign.setOnClickListener(new View.OnClickListener() {
             @Override
