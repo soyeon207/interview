@@ -21,6 +21,7 @@ public class mock_type extends AppCompatActivity {
     private Button next;
     private Button end;
 
+    //db로 대체할 부분
     private String[] app = {"작년 방과후 시간에 무엇을 했나?", "어노테이션(@)와 주석의 차이는?", "디자인 패턴을 알고 있는가?", "안드로이드는 언제 배웠나요?", "ios를 배우고 싶은 마음은?",
             "알고 있는 단축키는?", "가장 잘하는 언어와 그 이유?"};
 
