@@ -9,122 +9,116 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/under_line">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/top_text"
-            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="20dp"
             android:text="모의 면접"
-            android:textSize="20dp"
-            android:padding="15dp"
-            android:textColor="@color/main"
             android:textAlignment="center"
-            android:background="#ffffff"/>
+            android:textColor="@color/main"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/free_home"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/home_icon"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:id="@+id/free_home"/>
+            android:background="@drawable/home_icon" />
 
-        <View
-            android:id="@+id/line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@id/top_text"
-            android:background="@color/main"
-            android:orientation="horizontal" />
+    </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/line"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/type"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/main">
+                android:text="원하는 종류의 면접을 선택하세요"
+                android:textColor="#404040"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="35dp"
+                />
+            <RelativeLayout
+                android:gravity="center"
+                android:id="@+id/type"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_color">
 
-                <Button
-                    android:id="@+id/mock_btn"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="35dp"
-                    android:background="@drawable/circle_nocolor"
-                    android:layout_centerHorizontal="true"/>
 
                 <TextView
                     android:id="@+id/mock_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/mock_btn"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:text="직종별"
+                    android:textStyle="bold"
                     android:textColor="#ffffff"
-                    android:textSize="40dp"
-                    android:layout_below="@+id/mock_btn"
-                    android:layout_centerHorizontal="true"/>
+                    android:textSize="35dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="원하는 직종에 맞는 질문을 제공합니다."
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp"
                     android:layout_below="@+id/mock_text"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:text="원하는 직종에\n맞는 질문을\n제공합니다."
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/company"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#ffffff">
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/circle_nocolor">
 
-                <Button
-                    android:id="@+id/free_btn"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="35dp"
-                    android:background="@drawable/circle_color"
-                    android:layout_centerHorizontal="true"/>
 
                 <TextView
                     android:id="@+id/free_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="자유 면접"
-                    android:textColor="@color/main"
-                    android:textSize="40dp"
                     android:layout_below="@+id/free_btn"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:text="기업별"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="35dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="원하는 기업에 맞는 질문을 제공합니다."
-                    android:textColor="@color/main"
-                    android:textSize="15dp"
                     android:layout_below="@+id/free_text"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:text="원하는 기업에\n맞는 질문을\n제공합니다."
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
-    </RelativeLayout>
 
 </LinearLayout>

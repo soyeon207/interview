@@ -10,15 +10,13 @@
 
     <TextView
         android:id="@+id/interview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/under_line"
-        android:padding="15dp"
-        android:text="SIGN UP"
-
-        android:textAlignment="center"
-        android:textColor="#AF3421"
-        android:textSize="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+        android:layout_margin="30dp"
+    android:text="New\nAccount"
+        android:textColor="#404040"
+        android:textSize="25dp"
         android:textStyle="bold" />
 
     <TextView
@@ -34,23 +32,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginBottom="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         >
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="이름 "
-            android:layout_marginLeft="30dp"
-            android:textColor="#AF3421"
+            android:textColor="#5D5D5D"
             />
         <EditText
             android:textColor="#AF3421"
             android:background="@drawable/under_line"
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
@@ -60,77 +55,47 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginBottom="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="닉네임"
-            android:layout_marginLeft="30dp"
-
-            android:textColor="#AF3421"
+            android:textColor="#5D5D5D"
             />
         <EditText
             android:textColor="#AF3421"
             android:background="@drawable/under_line"
             android:id="@+id/nick"
             android:layout_width="match_parent"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
             android:layout_height="wrap_content"
 
             />
     </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
-
-</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginBottom="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아이디"
-            android:layout_marginLeft="30dp"
-            android:textColor="#AF3421"
+            android:textColor="#5D5D5D"
             />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <EditText
+            android:textColor="#AF3421"
+            android:background="@drawable/under_line"
+            android:id="@+id/id"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <EditText
-                android:textColor="#AF3421"
-                android:background="@drawable/under_line"
-                android:id="@+id/id"
-                android:layout_marginLeft="30dp"
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-
-                />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginRight="30dp"
-                android:id="@+id/checkid"
-                android:padding="10dp"
-                android:text="중복 체크"
-                android:layout_marginTop="5dp"
-                android:textColor="#ffffff"
-                android:background="@color/colorMain"
-
-                />
-
-        </LinearLayout>
-
+            />
 
     </LinearLayout>
 
@@ -138,24 +103,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="비번"
-            android:layout_marginLeft="30dp"
-            android:textColor="#AF3421"
+            android:textColor="#5D5D5D"
             />
         <EditText
-            android:textColor="#AF3421"
+            android:textColor="#5D5D5D"
             android:background="@drawable/under_line"
             android:id="@+id/passwd"
             android:layout_width="match_parent"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-
             />
     </LinearLayout>
 
@@ -167,8 +130,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:text="SIGN UP"
+        android:textSize="20dp"
         android:background="@drawable/button"
-        android:textColor="#ffffff"
+        android:textColor="#404040"
+        android:textStyle="bold"
         />
 
 
