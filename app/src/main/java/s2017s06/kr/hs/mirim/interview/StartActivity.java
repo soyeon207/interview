@@ -295,7 +295,7 @@ public class StartActivity extends TabActivity {
             tabhost.getTabWidget().getChildAt(i).setBackgroundResource(R.color.white);
 
             TextView tv = tabhost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
-            tv.setTextColor(Color.parseColor("#AF3421"));
+            tv.setTextColor(Color.parseColor("#404040"));
         }
 
 
@@ -304,7 +304,7 @@ public class StartActivity extends TabActivity {
 
         tabhost.getTabWidget().setCurrentTab(0);
         tabhost.getTabWidget().getChildAt(tabhost.getCurrentTab())
-                .setBackgroundResource(R.color.main);
+                .setBackgroundResource(R.color.m);
     }
 
     @Override

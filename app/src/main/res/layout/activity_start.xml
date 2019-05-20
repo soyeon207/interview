@@ -111,9 +111,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/under_line"
-                    android:padding="15dp"
-                    android:text="Tip"
+                    android:background="#ffffff"
+                    android:padding="20dp"
+                    android:text="TIP"
                     android:textAlignment="center"
                     android:textColor="@color/main"
                     android:textSize="20dp"
@@ -232,11 +232,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/under_line"
-                        android:padding="15dp"
+                        android:background="#ffffff"
+                        android:padding="20dp"
                         android:text="커뮤니티"
                         android:textAlignment="center"
-                        android:textColor="#AF3421"
+                        android:textColor="@color/main"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -276,9 +276,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/under_line"
-                    android:padding="15dp"
-                    android:text="My"
+                    android:background="#ffffff"
+                    android:padding="20dp"
+                    android:text="MY"
                     android:textAlignment="center"
                     android:textColor="@color/main"
                     android:textSize="20dp"

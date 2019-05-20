@@ -42,7 +42,7 @@
             android:textColor="#5D5D5D"
             />
         <EditText
-            android:textColor="#AF3421"
+            android:textColor="#FDCB31"
             android:background="@drawable/under_line"
             android:id="@+id/name"
             android:layout_width="match_parent"
@@ -65,7 +65,7 @@
             android:textColor="#5D5D5D"
             />
         <EditText
-            android:textColor="#AF3421"
+            android:textColor="#FDCB31"
             android:background="@drawable/under_line"
             android:id="@+id/nick"
             android:layout_width="match_parent"
@@ -90,7 +90,7 @@
             />
 
         <EditText
-            android:textColor="#AF3421"
+            android:textColor="#FDCB31"
             android:background="@drawable/under_line"
             android:id="@+id/id"
             android:layout_width="match_parent"
@@ -113,7 +113,7 @@
             android:textColor="#5D5D5D"
             />
         <EditText
-            android:textColor="#5D5D5D"
+            android:textColor="#FDCB31"
             android:background="@drawable/under_line"
             android:id="@+id/passwd"
             android:layout_width="match_parent"
