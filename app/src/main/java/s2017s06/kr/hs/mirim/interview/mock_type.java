@@ -3,19 +3,13 @@ package s2017s06.kr.hs.mirim.interview;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.hardware.Camera;
 import android.media.MediaRecorder;
 import android.os.Environment;
-import android.provider.MediaStore;
-import android.speech.tts.TextToSpeech;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -28,17 +22,12 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
 import java.util.Random;
 
 public class mock_type extends AppCompatActivity {
     String id, pwd, type;
 
-    //private Button camera;
     private Button next;
     private Button end;
 
@@ -47,9 +36,9 @@ public class mock_type extends AppCompatActivity {
     int random2 = 0;
     char[] qChar;
     int i = 0;
-    int j = 0;
 
     TextView question;
+    String q;
 
     /*private TextToSpeech tts;
     private Button btSpeak;*/
@@ -148,9 +137,11 @@ public class mock_type extends AppCompatActivity {
 
         switch (type) {
             case "app":
-                random  = rnd.nextInt(app.length);
+                random  = (int) (Math.random() * app.length);
+                question.setText(random);
                 qChar = app[random].toCharArray();
-                question.setText(qChar, 0, qChar.length);
+                q = app[random];
+                question.setText(q);
                 i++;
                 break;
 
@@ -186,17 +177,6 @@ public class mock_type extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 speakOutNow();
-            }
-        });*/
-
-        /*camera=(Button)findViewById(R.id.camera);
-        camera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(isExistsCameraApplication()){
-                    Intent cameraApp = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(cameraApp, 10000);
-                }
             }
         });*/
 
@@ -332,16 +312,6 @@ public class mock_type extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "녹화를 중지합니다.", Toast.LENGTH_LONG).show();
     }
-
-    /*private boolean isExistsCameraApplication(){
-        PackageManager packageManager = getPackageManager();
-
-        Intent cameraApp = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-        List<ResolveInfo> cameraApps = packageManager.queryIntentActivities(cameraApp, PackageManager.MATCH_DEFAULT_ONLY);
-
-        return cameraApps.size() > 0;
-    }*/
 
     //앱종료시 tts를 같이 종료해 준다.
     //@Override
