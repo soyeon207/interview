@@ -5,11 +5,14 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.media.MediaRecorder;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -38,7 +41,6 @@ public class mock_type extends AppCompatActivity {
     int i = 0;
 
     TextView question;
-    String q;
 
     /*private TextToSpeech tts;
     private Button btSpeak;*/
@@ -116,6 +118,7 @@ public class mock_type extends AppCompatActivity {
         id = intent.getStringExtra("id");
         pwd = intent.getStringExtra("pwd");
         type = intent.getStringExtra("type");
+        //Toast.makeText(getApplicationContext(), type, Toast.LENGTH_LONG).show();
 
         ImageView free_home = findViewById(R.id.free_home);
         free_home.setOnClickListener(new View.OnClickListener() {
@@ -133,16 +136,13 @@ public class mock_type extends AppCompatActivity {
 
         //btSpeak = (Button) findViewById(R.id.speak);
 
-        question=findViewById(R.id.question);
+        question = (TextView)findViewById(R.id.question);
 
         switch (type) {
             case "app":
-                random  = (int) (Math.random() * app.length);
-                question.setText(random);
+                random = (int)(Math.random() * app.length);
                 qChar = app[random].toCharArray();
-                q = app[random];
-                question.setText(q);
-                i++;
+                question.setText(qChar, 0, qChar.length);
                 break;
 
             case "con":
@@ -180,15 +180,15 @@ public class mock_type extends AppCompatActivity {
             }
         });*/
 
-        next=findViewById(R.id.btn_next);
+        next = findViewById(R.id.btn_next);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i++;
-                switch (type){
+                switch (type) {
                     case "app":
                         random2 = rnd.nextInt(app.length);
-                        if(random2 == random) if(random2++ > app.length) random2 = 0;
+                        if (random2 == random) if (random2++ > app.length) random2 = 0;
                         qChar = app[random2].toCharArray();
                         question.setText(qChar, 0, qChar.length);
                         random = random2;
@@ -225,15 +225,15 @@ public class mock_type extends AppCompatActivity {
                         break;
                 }
 
-                if(i == 5) next.setVisibility(View.GONE);
+                if (i == 5) next.setVisibility(View.GONE);
             }
         });
 
-        end=findViewById(R.id.btn_end);
+        end = findViewById(R.id.btn_end);
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(), mock_select.class);
+                Intent intent = new Intent(getApplicationContext(), mock_select.class);
                 intent.putExtra("id", id);
                 intent.putExtra("pwd", pwd);
                 intent.putExtra("mock", "type");
@@ -294,6 +294,13 @@ public class mock_type extends AppCompatActivity {
             recorder.start();
 
             Toast.makeText(getApplicationContext(), "녹화를 시작합니다.", Toast.LENGTH_LONG).show();
+
+            MediaScannerConnection.scanFile(getApplicationContext(), new String[]{path}, null, new MediaScannerConnection.OnScanCompletedListener() {
+                        @Override
+                        public void onScanCompleted(String path, Uri uri) {
+                            Log.v("File scan", "file:" + path + "was scanned seccessfully");
+                        }
+                    });
 
         } catch (IOException e) {
             e.printStackTrace();

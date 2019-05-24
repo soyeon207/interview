@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class mock_select extends AppCompatActivity {
     String id, pwd, mock;
@@ -25,6 +26,7 @@ public class mock_select extends AppCompatActivity {
         id = intent.getStringExtra("id");
         pwd = intent.getStringExtra("pwd");
         mock = intent.getStringExtra("mock");
+        //Toast.makeText(getApplicationContext(), mock, Toast.LENGTH_LONG).show();
 
         ImageView free_home = findViewById(R.id.free_home);
         free_home.setOnClickListener(new View.OnClickListener() {
@@ -44,29 +46,30 @@ public class mock_select extends AppCompatActivity {
                 String type = "";
                 String company = "";
 
-                switch (view.getId()){
+                switch (view.getId()) {
                     case R.id.mock1:
-                        if(mock == "type") type = "app";
+                        if (mock.equals("type")) type = "app";
+                        //Toast.makeText(getApplicationContext(), type, Toast.LENGTH_LONG).show();
                         break;
 
                     case R.id.mock2:
-                        if(mock == "type") type = "con";
+                        if (mock.equals("type")) type = "con";
                         break;
 
                     case R.id.mock3:
-                        if(mock == "type") type = "webD";
+                        if (mock.equals("type")) type = "webD";
                         break;
 
                     case R.id.mock4:
-                        if(mock == "type") type = "web";
+                        if (mock == "type") type = "web";
                         break;
 
                     case R.id.mock5:
-                        if(mock == "type") type = "data";
+                        if (mock.equals("type")) type = "data";
                         break;
 
                     case R.id.mock6:
-                        if(mock == "type") type = "UiUx";
+                        if (mock.equals("type")) type = "UiUx";
                         break;
 
 
@@ -74,9 +77,9 @@ public class mock_select extends AppCompatActivity {
 
                 Intent intent = null;
 
-                if(mock.equals("type"))
-                     intent = new Intent(getApplicationContext(), mock_type.class);
-                else if(mock.equals("company"))
+                if (mock.equals("type"))
+                    intent = new Intent(getApplicationContext(), mock_type.class);
+                else if (mock.equals("company"))
                     intent = new Intent(getApplicationContext(), mock_company.class);
 
                 intent.putExtra("id", id);
@@ -91,69 +94,68 @@ public class mock_select extends AppCompatActivity {
         text = findViewById(R.id.text_mock1);
         text.setText(mock);
 
-        switch(mock){
+        switch (mock) {
             case "type":
-                mock1 = (RelativeLayout)findViewById(R.id.mock1);
+                mock1 = (RelativeLayout) findViewById(R.id.mock1);
                 text = findViewById(R.id.text_mock1);
                 text.setText("APP 개발");
                 mock1.setOnClickListener(changeActivity);
 
-                mock2 = (RelativeLayout)findViewById(R.id.mock2);
+                mock2 = (RelativeLayout) findViewById(R.id.mock2);
                 text = findViewById(R.id.text_mock2);
                 text.setText("CONTENT 디자인");
                 mock2.setOnClickListener(changeActivity);
 
-                mock3 = (RelativeLayout)findViewById(R.id.mock3);
+                mock3 = (RelativeLayout) findViewById(R.id.mock3);
                 text = findViewById(R.id.text_mock3);
                 text.setText("WEB 디자인");
                 mock3.setOnClickListener(changeActivity);
 
-                mock4 = (RelativeLayout)findViewById(R.id.mock4);
+                mock4 = (RelativeLayout) findViewById(R.id.mock4);
                 text = findViewById(R.id.text_mock4);
                 text.setText("WEB 개발");
                 mock4.setOnClickListener(changeActivity);
 
-                mock5 = (RelativeLayout)findViewById(R.id.mock5);
+                mock5 = (RelativeLayout) findViewById(R.id.mock5);
                 text = findViewById(R.id.text_mock5);
                 text.setText("정보 시스템 / 보안");
                 mock5.setOnClickListener(changeActivity);
 
-                mock6 = (RelativeLayout)findViewById(R.id.mock6);
+                mock6 = (RelativeLayout) findViewById(R.id.mock6);
                 text = findViewById(R.id.text_mock6);
                 text.setText("UI/UX 디자인");
                 mock6.setOnClickListener(changeActivity);
 
 
-
                 break;
 
             case "company":
-                mock1 = (RelativeLayout)findViewById(R.id.mock1);
+                mock1 = (RelativeLayout) findViewById(R.id.mock1);
                 text = findViewById(R.id.text_mock1);
                 text.setText("회사1");
                 mock1.setOnClickListener(changeActivity);
 
-                mock2 = (RelativeLayout)findViewById(R.id.mock2);
+                mock2 = (RelativeLayout) findViewById(R.id.mock2);
                 text = findViewById(R.id.text_mock2);
                 text.setText("CONTENT 디자인");
                 mock2.setOnClickListener(changeActivity);
 
-                mock3 = (RelativeLayout)findViewById(R.id.mock3);
+                mock3 = (RelativeLayout) findViewById(R.id.mock3);
                 text = findViewById(R.id.text_mock3);
                 text.setText("WEB 디자인");
                 mock3.setOnClickListener(changeActivity);
 
-                mock4 = (RelativeLayout)findViewById(R.id.mock4);
+                mock4 = (RelativeLayout) findViewById(R.id.mock4);
                 text = findViewById(R.id.text_mock4);
                 text.setText("WEB 개발");
                 mock4.setOnClickListener(changeActivity);
 
-                mock5 = (RelativeLayout)findViewById(R.id.mock5);
+                mock5 = (RelativeLayout) findViewById(R.id.mock5);
                 text = findViewById(R.id.text_mock5);
                 text.setText("정보 시스템 / 보안");
                 mock5.setOnClickListener(changeActivity);
 
-                mock6 = (RelativeLayout)findViewById(R.id.mock6);
+                mock6 = (RelativeLayout) findViewById(R.id.mock6);
                 text = findViewById(R.id.text_mock6);
                 text.setText("UI/UX 디자인");
                 mock6.setOnClickListener(changeActivity);
