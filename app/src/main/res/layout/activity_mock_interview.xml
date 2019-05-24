@@ -96,11 +96,10 @@
                     android:id="@+id/free_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/free_btn"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:text="기업별"
-                    android:textColor="#ffffff"
+                    android:textColor="#FDCB31"
                     android:textStyle="bold"
                     android:textSize="35dp" />
 
@@ -112,7 +111,7 @@
                     android:layout_marginTop="5dp"
                     android:textAlignment="center"
                     android:text="원하는 기업에\n맞는 질문을\n제공합니다."
-                    android:textColor="#ffffff"
+                    android:textColor="#FDCB31"
                     android:textSize="15dp" />
 
             </RelativeLayout>

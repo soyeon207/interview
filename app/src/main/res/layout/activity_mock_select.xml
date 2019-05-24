@@ -89,7 +89,7 @@
                         android:layout_margin="10dp"
                         android:textAlignment="center"
                         android:text="CONTENT\n디자인"
-                        android:textColor="#ffffff"
+                        android:textColor="#FDCB31"
                         android:textSize="20dp" />
 
                 </RelativeLayout>
@@ -117,7 +117,7 @@
                         android:layout_margin="10dp"
                         android:text="WEB\n디자인"
                         android:textAlignment="center"
-                        android:textColor="#ffffff"
+                        android:textColor="#FDCB31"
                         android:textSize="20dp" />
 
                 </RelativeLayout>
@@ -136,7 +136,7 @@
                         android:layout_margin="10dp"
                         android:text="WEB\n개발"
                         android:textAlignment="center"
-                        android:textColor="#ffffff"
+                        android:textColor="#FDCB31"
                         android:textSize="20dp" />
 
                 </RelativeLayout>
@@ -165,7 +165,7 @@
                         android:layout_margin="10dp"
                         android:text="정보 시스템 /\n보안"
                         android:textAlignment="center"
-                        android:textColor="#ffffff"
+                        android:textColor="#FDCB31"
                         android:textSize="20dp" />
 
                 </RelativeLayout>
@@ -185,7 +185,7 @@
                         android:textAlignment="center"
 
                         android:text="UI/UX 디자인"
-                        android:textColor="#ffffff"
+                        android:textColor="#FDCB31"
                         android:textSize="20dp" />
 
                 </RelativeLayout>
