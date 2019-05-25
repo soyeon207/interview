@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".free_q"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".free_q">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,70 +21,133 @@
             android:textAlignment="center"
             android:textColor="@color/main"
             android:textSize="20dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/freehome"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/home_icon"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:id="@+id/freehome"
-            />
+            android:background="@drawable/home_icon" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5dp">
+        android:layout_below="@id/line">
 
-        <TextView
-
-            android:textColor="#FDCB31"
-            android:id="@+id/question"
+        <LinearLayout
+            android:id="@+id/q_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:textSize="25dp" />
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
 
-        <!-- 카메라 화면을 직접 띄울 수 있도록 수정할 곳 -->
-        <Button
-            android:id="@+id/camera"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="@drawable/button"
-            android:text="녹화하기"
-            android:padding="10dp"
-            android:textColor="#ffffff"
-            android:textSize="25dp" />
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/speak"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="읽기"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:layout_below="@id/q_view"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/viedo_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_start"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button"
+                    android:onClick="BtnStart"
+                    android:text="촬영 시작"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/btn_stop"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button"
+                    android:onClick="BtnStop"
+                    android:text="촬영 중지"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <SurfaceView
+                android:id="@+id/surfaceView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viedo_view"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
 
         <Button
             android:id="@+id/btn_end"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/button"
             android:text="끝내기"
             android:textColor="#ffffff"
             android:textSize="20dp" />
 
-        <!--<Button
+        <Button
             android:id="@+id/btn_next"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/button"
             android:text="다음 질문"
             android:textColor="#ffffff"
-            android:textSize="20dp" />-->
+            android:textSize="20dp" />
 
     </RelativeLayout>
 
