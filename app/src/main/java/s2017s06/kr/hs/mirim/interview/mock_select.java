@@ -49,29 +49,33 @@ public class mock_select extends AppCompatActivity {
                 switch (view.getId()) {
                     case R.id.mock1:
                         if (mock.equals("type")) type = "app";
-                        //Toast.makeText(getApplicationContext(), type, Toast.LENGTH_LONG).show();
+                        else if(mock.equals("company")) company = "global";
                         break;
 
                     case R.id.mock2:
                         if (mock.equals("type")) type = "con";
+                        else if(mock.equals("company")) company = "navi";
                         break;
 
                     case R.id.mock3:
                         if (mock.equals("type")) type = "webD";
+                        else if(mock.equals("company")) company = "shin";
                         break;
 
                     case R.id.mock4:
                         if (mock == "type") type = "web";
+                        else if(mock.equals("company")) company = "sqi";
                         break;
 
                     case R.id.mock5:
                         if (mock.equals("type")) type = "data";
+                        else if(mock.equals("company")) company = "lg";
                         break;
 
                     case R.id.mock6:
                         if (mock.equals("type")) type = "UiUx";
+                        else if(mock.equals("company")) company = "covision";
                         break;
-
 
                 }
 
@@ -132,32 +136,32 @@ public class mock_select extends AppCompatActivity {
             case "company":
                 mock1 = (RelativeLayout) findViewById(R.id.mock1);
                 text = findViewById(R.id.text_mock1);
-                text.setText("회사1");
+                text.setText("글로벌 휴머니즘");
                 mock1.setOnClickListener(changeActivity);
 
                 mock2 = (RelativeLayout) findViewById(R.id.mock2);
                 text = findViewById(R.id.text_mock2);
-                text.setText("CONTENT 디자인");
+                text.setText("네비웍스");
                 mock2.setOnClickListener(changeActivity);
 
                 mock3 = (RelativeLayout) findViewById(R.id.mock3);
                 text = findViewById(R.id.text_mock3);
-                text.setText("WEB 디자인");
+                text.setText("신영증권");
                 mock3.setOnClickListener(changeActivity);
 
                 mock4 = (RelativeLayout) findViewById(R.id.mock4);
                 text = findViewById(R.id.text_mock4);
-                text.setText("WEB 개발");
+                text.setText("SQI 소프트");
                 mock4.setOnClickListener(changeActivity);
 
                 mock5 = (RelativeLayout) findViewById(R.id.mock5);
                 text = findViewById(R.id.text_mock5);
-                text.setText("정보 시스템 / 보안");
+                text.setText("LG히다찌");
                 mock5.setOnClickListener(changeActivity);
 
                 mock6 = (RelativeLayout) findViewById(R.id.mock6);
                 text = findViewById(R.id.text_mock6);
-                text.setText("UI/UX 디자인");
+                text.setText("코비젼");
                 mock6.setOnClickListener(changeActivity);
 
 
