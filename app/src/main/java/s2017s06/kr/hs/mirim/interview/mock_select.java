@@ -49,32 +49,32 @@ public class mock_select extends AppCompatActivity {
                 switch (view.getId()) {
                     case R.id.mock1:
                         if (mock.equals("type")) type = "app";
-                        else if(mock.equals("company")) company = "global";
+                        if(mock.equals("company")) company = "global";
                         break;
 
                     case R.id.mock2:
                         if (mock.equals("type")) type = "con";
-                        else if(mock.equals("company")) company = "navi";
+                        if(mock.equals("company")) company = "navi";
                         break;
 
                     case R.id.mock3:
                         if (mock.equals("type")) type = "webD";
-                        else if(mock.equals("company")) company = "shin";
+                        if(mock.equals("company")) company = "shin";
                         break;
 
                     case R.id.mock4:
                         if (mock == "type") type = "web";
-                        else if(mock.equals("company")) company = "sqi";
+                        if(mock.equals("company")) company = "sqi";
                         break;
 
                     case R.id.mock5:
                         if (mock.equals("type")) type = "data";
-                        else if(mock.equals("company")) company = "lg";
+                        if(mock.equals("company")) company = "lg";
                         break;
 
                     case R.id.mock6:
                         if (mock.equals("type")) type = "UiUx";
-                        else if(mock.equals("company")) company = "covision";
+                        if(mock.equals("company")) company = "covision";
                         break;
 
                 }
@@ -130,7 +130,6 @@ public class mock_select extends AppCompatActivity {
                 text.setText("UI/UX 디자인");
                 mock6.setOnClickListener(changeActivity);
 
-
                 break;
 
             case "company":
@@ -163,7 +162,6 @@ public class mock_select extends AppCompatActivity {
                 text = findViewById(R.id.text_mock6);
                 text.setText("코비젼");
                 mock6.setOnClickListener(changeActivity);
-
 
                 break;
         }
