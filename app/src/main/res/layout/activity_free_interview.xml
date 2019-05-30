@@ -20,18 +20,16 @@
             android:textAlignment="center"
             android:textColor="@color/main"
             android:textSize="20dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/free_home"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/home_icon"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:id="@+id/free_home"
-            />
+            android:background="@drawable/home_icon" />
 
     </RelativeLayout>
 
@@ -43,23 +41,23 @@
         android:orientation="horizontal">
 
         <EditText
-            android:layout_centerInParent="true"
             android:id="@+id/addText"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:hint="추가할 질문을 입력해주세요."
-            android:layout_margin="5dp"/>
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:hint="추가할 질문을 입력해주세요." />
 
         <Button
-            android:layout_alignParentRight="true"
             android:id="@+id/add"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
             android:background="@drawable/circle_color"
-            android:textColor="#ffffff"
-            android:textSize="25dp"
             android:text="+"
-            android:layout_margin="10dp"/>
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
 
     </RelativeLayout>
 
@@ -67,9 +65,9 @@
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_weight="1"
-        android:choiceMode="multipleChoice"
-        android:layout_margin="10dp"/>
+        android:choiceMode="multipleChoice" />
 
 
     <RelativeLayout
@@ -79,15 +77,15 @@
 
         <Button
             android:id="@+id/start"
-            android:layout_gravity="center"
-            android:layout_centerInParent="true"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
             android:background="@drawable/button"
+            android:text="시작"
             android:textColor="#404040"
-            android:textStyle="bold"
             android:textSize="25dp"
-            android:text="시작" />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

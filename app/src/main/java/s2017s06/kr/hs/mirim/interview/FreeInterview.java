@@ -48,10 +48,10 @@ public class FreeInterview extends AppCompatActivity {
         Items.add("좌우명이 뭔가요?");
         Items.add("마찰이 생긴다면 어떻게 대처할 건가요?");
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, Items);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_multichoice, Items);
         listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(adapter);
-        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
         addText = (EditText) findViewById(R.id.addText);
         btnAdd = (Button) findViewById(R.id.add);
