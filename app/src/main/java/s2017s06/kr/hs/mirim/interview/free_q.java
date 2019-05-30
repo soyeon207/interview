@@ -34,6 +34,7 @@ public class free_q extends AppCompatActivity {
     private Button end;
     char[] qChar;
     String id,pwd;
+    String q[] = null;
 
     //TextView question;
 
@@ -107,7 +108,7 @@ public class free_q extends AppCompatActivity {
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
         pwd = intent.getStringExtra("passwd");
-        final String Q = intent.getStringExtra("Q");
+        q = intent.getStringArrayExtra("Q");
         final TextView question=findViewById(R.id.question);
 
         ImageView home=findViewById(R.id.freehome);
@@ -121,10 +122,10 @@ public class free_q extends AppCompatActivity {
             }
         });
 
-        if(Q == null) {
+        if(question == null) {
             Toast.makeText(getApplicationContext(), "질문이 선택되지 않았습니다.", Toast.LENGTH_LONG).show();
         }
-        qChar = Q.toCharArray();
+        qChar = q[0].toCharArray();
         question.setText(qChar, 0, qChar.length);
 
         /*next=findViewById(R.id.btn_next);

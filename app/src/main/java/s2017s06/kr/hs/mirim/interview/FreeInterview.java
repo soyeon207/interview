@@ -75,11 +75,13 @@ public class FreeInterview extends AppCompatActivity {
             public void onClick(View view) {
 
                 SparseBooleanArray booleans = listView.getCheckedItemPositions();
-                String question = null;
+                String question[] = null;
+                int j = 0;
 
                 for(int i = 0; i < Items.size(); i++){
                     if(booleans.get(i)){
-                        question = Items.get(i);
+                        question[j] = Items.get(i);
+                        j++;
                     }
                 }
 
