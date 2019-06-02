@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -81,6 +82,7 @@ public class FreeInterview extends AppCompatActivity {
                 for(int i = 0; i < Items.size(); i++){
                     if(booleans.get(i)){
                         question[j] = Items.get(i);
+                        Toast.makeText(FreeInterview.this, i + "번 째의 값이 " + j +"에 들어갔다.", Toast.LENGTH_SHORT).show();
                         j++;
                     }
                 }
