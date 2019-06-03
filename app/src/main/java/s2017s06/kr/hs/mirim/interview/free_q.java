@@ -32,7 +32,8 @@ import java.util.List;
 public class free_q extends AppCompatActivity {
     // private Button next;
     private Button end;
-    char[] qChar;
+    //char[] qChar;
+    String qString;
     String id,pwd;
     String q[] = null;
 
@@ -125,8 +126,9 @@ public class free_q extends AppCompatActivity {
         if(question == null) {
             Toast.makeText(getApplicationContext(), "질문이 선택되지 않았습니다.", Toast.LENGTH_LONG).show();
         }
-        qChar = q[0].toCharArray();
-        question.setText(qChar, 0, qChar.length);
+        //qChar = q[0].toCharArray();
+        qString = q[0];
+        question.setText(qString);
 
         /*next=findViewById(R.id.btn_next);
         next.setOnClickListener(new View.OnClickListener() {

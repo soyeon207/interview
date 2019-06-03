@@ -23,7 +23,7 @@ public class FreeInterview extends AppCompatActivity {
     EditText addText;
     String id,pwd;
     Button start;
-
+    String question[] = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,17 +74,15 @@ public class FreeInterview extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 SparseBooleanArray booleans = listView.getCheckedItemPositions();
-                String question[] = null;
                 int j = 0;
 
                 for(int i = 0; i < Items.size(); i++){
-                    if(booleans.get(i)){
+                    /*if(booleans.get(i)){
                         question[j] = Items.get(i);
-                        Toast.makeText(FreeInterview.this, i + "번 째의 값이 " + j +"에 들어갔다.", Toast.LENGTH_SHORT).show();
                         j++;
-                    }
+                    }*/
+                    Toast.makeText(FreeInterview.this, booleans.get(i) + " ", Toast.LENGTH_SHORT).show();
                 }
 
                 Intent intent = new Intent(getApplicationContext(), free_q.class);
