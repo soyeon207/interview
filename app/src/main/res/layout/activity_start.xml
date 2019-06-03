@@ -183,14 +183,48 @@
                     android:textStyle="bold"
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:gravity="center"
-                    android:text="누르면 외부 사이트로 연결됩니다. "
-                    android:textColor="#333333"
-                    android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_margin="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="면접 예상 질문"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            android:text="미림에 들어오는 회사\n예상질문을 미리 확인하고\n지금부터 면접을 준비하세요!"
+                            />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select"
+                            android:textColor="@color/white"
+                            android:background="@drawable/button"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:onClick="mOnPopupClick"
+                            android:layout_marginRight="20dp"
+                            />
+
+                    </LinearLayout>
+
+
 
 
 

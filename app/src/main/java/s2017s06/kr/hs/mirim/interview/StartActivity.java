@@ -46,10 +46,9 @@ public class StartActivity extends TabActivity {
     String pwd2,id2;
     int positions;
     ListView listView;
+    Button tip_first;
     MyListAdapter myListAdapter;
-    LinearLayout tip_1,tip_2,tip_3;
     ArrayList<list_item> list_itemArrayList;
-    AppCompatActivity a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,39 +56,15 @@ public class StartActivity extends TabActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-
-        tip_1 = findViewById(R.id.tip_btn1);
-        tip_2 = findViewById(R.id.tip_btn2);
-        tip_3 = findViewById(R.id.tip_btn3);
-
-        tip_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://univ20.com/48245?fbclid=IwAR38qBizGRMKobVT4pxV48YvxjicZNK_n_SOhJRR9edY0yGWvYy-9gzb5xk"));
-                startActivity(intent);
-            }
-        });
-
-        tip_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://brunch.co.kr/@kylelee/19?fbclid=IwAR05VujuhA0xzr6v8BYWXTDeySiu61zGGrL_W23dPiNd6_wrQw3UNcIWuhU"));
-                startActivity(intent);
-            }
-        });
-
-        tip_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://brunch.co.kr/@jobplanet/4?fbclid=IwAR1V1FSlpksTgn91I6TWa02WlHPwrLnjzx-1MFwbDlqFLJGwROApcJcS7nU"));
-                startActivity(intent);
-            }
-        });
-
         Intent intent = getIntent();
         id2 =intent.getStringExtra("id");
         pwd2=intent.getStringExtra("pwd");
+        tip_first.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
         listView = findViewById(R.id.start_listview);
         list_itemArrayList = new ArrayList<list_item>();
 
@@ -294,6 +269,24 @@ public class StartActivity extends TabActivity {
             }
         });
 
+    }
+
+    public void mOnPopupClick(View v){
+        //데이터 담아서 팝업(액티비티) 호출
+        Intent intent = new Intent(this, Popup.class);
+        intent.putExtra("data", "Test Popup");
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK) {
+                //데이터 받기
+                String result = data.getStringExtra("result");
+
+            }
+        }
     }
 
     public static void setTabColor(TabHost tabhost) {
