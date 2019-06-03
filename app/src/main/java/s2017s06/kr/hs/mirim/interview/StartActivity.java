@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -32,9 +33,14 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+
 public class StartActivity extends TabActivity {
     TextView nickshow,interview;
-    RelativeLayout Mock,Free;
+    LinearLayout Mock,Free;
     TextView exit_btn;
     ImageView write;
     String pwd2,id2;
@@ -43,12 +49,14 @@ public class StartActivity extends TabActivity {
     MyListAdapter myListAdapter;
     LinearLayout tip_1,tip_2,tip_3;
     ArrayList<list_item> list_itemArrayList;
+    AppCompatActivity a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
 
         tip_1 = findViewById(R.id.tip_btn1);
         tip_2 = findViewById(R.id.tip_btn2);
@@ -114,7 +122,6 @@ public class StartActivity extends TabActivity {
 
         Mock = findViewById(R.id.Mock);
         Free = findViewById(R.id.Free);
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, final long id) {
