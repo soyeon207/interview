@@ -174,13 +174,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#ffffff"
+                    android:background="@drawable/gradient"
                     android:padding="20dp"
                     android:text="TIP"
                     android:textAlignment="center"
-                    android:textColor="@color/main"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -191,94 +192,7 @@
                     android:textColor="#333333"
                     android:textSize="15dp" />
 
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:id="@+id/tip_btn1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="15dp"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:layout_width="45dp"
-                                android:layout_height="45dp"
-                                android:background="@drawable/circle_color"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="30dp"
-                                android:text="다 된 취업에 면접 뿌리지 않는 팁 7"
-                                android:textColor="#333333"
-                                android:textSize="18dp"
-                                android:gravity="center"
-                                android:background="@drawable/box"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/tip_btn2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="15dp"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:layout_width="45dp"
-                                android:layout_height="45dp"
-                                android:background="@drawable/circle_color"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="30dp"
-                                android:text="채용담당자가 전하는 취업준비 TIP 17"
-                                android:textColor="#333333"
-                                android:textSize="18dp"
-                                android:gravity="center"
-                                android:background="@drawable/box"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/tip_btn3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="15dp"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:layout_width="45dp"
-                                android:layout_height="45dp"
-                                android:background="@drawable/circle_color"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="30dp"
-                                android:text="성공적인 취업을 위한 면접준비 팁"
-                                android:textColor="#333333"
-                                android:textSize="18dp"
-                                android:gravity="center"
-                                android:background="@drawable/box"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </ScrollView>
 
             </LinearLayout>
 
@@ -295,13 +209,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#ffffff"
+                        android:background="@drawable/gradient"
                         android:padding="20dp"
                         android:text="커뮤니티"
                         android:textAlignment="center"
-                        android:textColor="@color/main"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        />
 
                     <ImageView
                         android:id="@+id/write"
@@ -339,13 +254,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#ffffff"
+                    android:background="@drawable/gradient"
                     android:padding="20dp"
                     android:text="MY"
                     android:textAlignment="center"
-                    android:textColor="@color/main"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    />
 
 
                 <LinearLayout

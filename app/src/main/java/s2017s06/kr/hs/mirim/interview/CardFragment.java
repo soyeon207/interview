@@ -32,8 +32,8 @@ public class CardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.item_viewpager, container, false);
-        String t[] = {"모의 면접","자유 면접"};
-        String t2[] = {"직종별, 기업별로 나눠서\n모의 면접을 진행해 보세요\n기업 맞춤형 질문을 제공합니다.","본인이 직접 질문을 추가하거나\n이미 있는 질문 중 맘에 드는 질문을\n선택해 면접을 진행하세요"};
+        String t[] = {"기업별","직종별"};
+        String t2[] = {"원하는 기업에\n맞는 질문을\n제공합니다","원하는 직종에\n맞는 질문을\n제공합니다"};
         cardView = (CardView) view.findViewById(R.id.cardView);
         cardView.setMaxCardElevation(cardView.getCardElevation() * CardAdapter.MAX_ELEVATION_FACTOR);
 
@@ -47,6 +47,12 @@ public class CardFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(getArguments().getInt("position") == 0) {
+
+                }
+                else {
+
+                }
                 Toast.makeText(getActivity(), "Button in Card " + getArguments().getInt("position")
                         + "Clicked!", Toast.LENGTH_SHORT).show();
             }

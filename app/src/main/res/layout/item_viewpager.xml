@@ -14,19 +14,23 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
+            android:background="@drawable/btn"
             android:orientation="vertical"
             android:padding="24dp">
+
 
             <TextView
                 android:id="@+id/title"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="Card title" />
 
             <TextView
+                android:textColor="#ADB5BA"
                 style="@style/TextAppearance.AppCompat.Body1"
                 android:id="@+id/content"
                 android:layout_width="wrap_content"
@@ -35,6 +39,7 @@
 
             <Button
                 android:id="@+id/button"
+                android:background="@drawable/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
