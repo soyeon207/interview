@@ -15,12 +15,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
+            android:background="@drawable/gradient"
             android:padding="20dp"
             android:text="자유 면접"
             android:textAlignment="center"
-            android:textColor="@color/main"
-            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textSize="17dp"
             android:textStyle="bold" />
 
         <ImageView
