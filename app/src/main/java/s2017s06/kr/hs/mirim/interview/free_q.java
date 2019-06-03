@@ -26,16 +26,18 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class free_q extends AppCompatActivity {
-    // private Button next;
+    private Button next;
     private Button end;
-    //char[] qChar;
+
     String qString;
     String id,pwd;
-    String q[] = null;
+    ArrayList<String> q = new ArrayList<String>();
+    int j = 0;
 
     //TextView question;
 
@@ -109,7 +111,7 @@ public class free_q extends AppCompatActivity {
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
         pwd = intent.getStringExtra("passwd");
-        q = intent.getStringArrayExtra("Q");
+        q = intent.getStringArrayListExtra("Q");
         final TextView question=findViewById(R.id.question);
 
         ImageView home=findViewById(R.id.freehome);
@@ -126,17 +128,19 @@ public class free_q extends AppCompatActivity {
         if(question == null) {
             Toast.makeText(getApplicationContext(), "질문이 선택되지 않았습니다.", Toast.LENGTH_LONG).show();
         }
-        //qChar = q[0].toCharArray();
-        qString = q[0];
-        question.setText(qString);
 
-        /*next=findViewById(R.id.btn_next);
+        //qString = q.get(0);
+        question.setText(q.get(j));
+
+        next=findViewById(R.id.btn_next);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                next.setVisibility(View.GONE);
+                if (j == q.size() - 1) next.setVisibility(View.GONE);
+                question.setText(q.get(j));
+                j++;
             }
-        });*/
+        });
 
         end=findViewById(R.id.btn_end);
         end.setOnClickListener(new View.OnClickListener() {

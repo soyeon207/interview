@@ -23,7 +23,7 @@ public class FreeInterview extends AppCompatActivity {
     EditText addText;
     String id,pwd;
     Button start;
-    String question[] = null;
+    ArrayList<String> question = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,14 +75,11 @@ public class FreeInterview extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SparseBooleanArray booleans = listView.getCheckedItemPositions();
-                int j = 0;
 
                 for(int i = 0; i < Items.size(); i++){
-                    /*if(booleans.get(i)){
-                        question[j] = Items.get(i);
-                        j++;
-                    }*/
-                    Toast.makeText(FreeInterview.this, booleans.get(i) + " ", Toast.LENGTH_SHORT).show();
+                    if(booleans.get(i)){
+                        question.add(Items.get(i));
+                    }
                 }
 
                 Intent intent = new Intent(getApplicationContext(), free_q.class);
