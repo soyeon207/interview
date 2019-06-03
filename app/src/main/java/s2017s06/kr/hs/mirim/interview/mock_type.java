@@ -82,7 +82,7 @@ public class mock_type extends AppCompatActivity {
     private String[] uiux = {"진행했던 프로젝트와 했던 일을 말해주세요", "디자인 의견이 맞지 않을 때 어떻게 해결할 것인가?", "잘 사용하는 디자인 프로그램은 무엇인가요?", "자신있는 Tool은 무엇인가요?",
             "롤모델로 삼거나 좋아하는 디자이너는 누구인가요?", "포토폴리오의 작업물은 본인이 다 작업한건가요?", "좋은 회사란 무엇이라고 생각하나요?", "상사가 자신의 잘못이나 디자인에 대해 지적한다면?",
             "스트레스를 푸는 자신만의 방법은?", "협업할 때 갈등이 생긴다면 어떤 방식으로 해결할 것인가?", "왜 지원자를 뽑아야 하죠?", "가치에 대한 정의를 내려보아라",
-            "영어를 왜 배워야 하는가?", "다른 일을 배워도 괜찮나요?", "어떤 사람이 되고 싶은가?", "왜 디자인을 하는가?", "UI/UX에서 가장 중요한 것이 무엇이라 생각하는가"
+            "영어를 왜 배워야 하는가?", "다른 일을 배워도 괜찮나요?", "어떤 사람이 되고 싶은가?", "왜 디자인을 하는가?", "UI/UX에서 가장 중요한 것이 무엇이라 생각하는가",
             "포토폴리오 작품 중 하나만 소개해주세요.", "디자인이란 무엇이라고 생각하나요?", "가장 자신 있는 디자인은?", "개발과 친수들과 협업한 작품이 있나요?"};
 
     private String[] webP = {"Web과 관련된 프로젝트 무엇을 했는지 말해주세요.", "사용해 본 웹호스팅 같은 것은?", "아파치의 버전과 php의 몇 버전을 사용했나요?", "jason을 해본 경험이 있나요?",
@@ -95,11 +95,19 @@ public class mock_type extends AppCompatActivity {
             "공모전에 많이 참가하신것같은데, 이 중 소개하고 싶은 작품이 있는지", "포트폴리오 내에서 가장 재미있었던, 성향에 맞았던 작품이 어떤것인지", "왜 디자인을 하는가?", "자신의 포트폴리오를 발표해주세요",
             "20대때 하고싶은 취미는?", "마지막으로 하고 싶은 말은?", "새로운 환경에 잘 적응할 수 있는가?", "포토폴리오의 구성은 어떻게 했나요?",
             "ACA 자격증이 포토샵과 일러스트를 어느정도 할 수 있으면 취득할 수 있나?", "디자인을 시작하게 된 계기는?", "경험을 쌓기 위해서는 어떻게 해야 하는지.", "디자인을 하고 싶은 이유?",
-            "이 회사에서 어떤 사람이 되고 싶은지", "지원동기가 무엇인가요?", "마지막으로 하고 싶은 말은?"};
+            "이 회사에서 어떤 사람이 되고 싶은지", "지원동기가 무엇인가요?", "마지막으로 하고 싶은 말은?", "가장 애착이 가는 작품은?"};
 
-    private String[] plat = {};
+    private String[] plat = {"자기소개와 지원동기를 60초 이내로 짧게 해주세요.", "다른 친구들과는 다른 자신만의 장점은?", "전공 관련해서 기억에 남는 프로젝트나 힘들었던 점들을 말해주세요.", "프로그래머로써 자신이 자질이 있는지 말해주세요.",
+            "학교에서 있었던 일 중에서 가장 기억나는 일이 무엇인가요?", "자신 있는 언어는?", "단축키 아는대로 말해주세요.", "왜 다른 애들처럼 대학에 가지 않고 취업을 우선으로 하게 되었나요?",
+            "학교에 다니는 동안 했던 프로젝트는 무엇인가요?", "한타/영타가 얼마나 나오나요?", "회사에 들어오고 이미지가 어땠나요?", "어떤 업무를 맡고 싶은지",
+            "회사가 학교보다 멀어질 수 있는데 괜찮겠어요?", "지금 배우고 있는 것이 전공에 맞다고 생각하나요?", "스트레스 받을 때는 어떻게 해소하나요?", "이 분야에 적성이 맞는 것 같나요?",
+            "프로그래밍을 어떻게 시작하게되었나요?", "야근 할 수 있겠나요?", "프로젝트를 진행하면서 가장 인상깊었던 프로젝트에 대해 설명하라.", "개발자로서 최종 목표는 무엇인가요."};
 
-    private String[] manage = {"선호하는 커피브랜드와 이유, 성공할 수 있었던 마케팅 기법 그리고 그 브랜드의 부족했던 점", ""};
+    private String[] manage = {"선호하는 커피브랜드와 이유, 성공할 수 있었던 마케팅 기법 그리고 그 브랜드의 부족했던 점", "지원동기 말해주세요.", "자신이 있는 언어와 툴은?", "자신이 알고 있는 단축키는?",
+            "가장 기억에 남는 프로젝트는 무엇인가요?", "다른 사람들이 이것은 쓸만하고 실용적이다라는 프로그램이 있나요?", "모르는 점이 있다면 어떻게 할건가요?", "상사와 문제가 생긴다면 어떻게 해결할건가요?",
+            "잘하는 외국어가 있나요?", "이 분야에 지원한 이유가 무엇인가요?", "회사에서 해야 하는 일 중에 가장 자신있는 것은?", "어떤 방법으로 자신의 스트레스를 해소하는지 말씀해주세요.", "전공을 하면서 힘들었던 점은?",
+            "아르바이트나 봉사활동 경험을 말해주세요.", "포상내용이 엄청 많은데 그 중에서 가장 의미있었고 가치있었던 경험 이야기해주세요.", "학생이 화장하는 것에 대해 어떤 의견인가요?", "야근 외에도 지방으로 근무를 하라고 회사에서 요청하면?",
+            "프로젝트를 하면서 어려웠던 점이 있었나요?", "회사에서 하고 싶은 것이 있나요?", "사무실에 있는 것과 밖으로 나가는 활동 중 어떤 것을 더 많이 할 것 같나요?", "궁금하신 점 물어보세요."};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -172,18 +180,33 @@ public class mock_type extends AppCompatActivity {
                 break;
 
             case "uiux":
+                random = (int)(Math.random() * uiux.length);
+                qChar = uiux[random].toCharArray();
+                question.setText(qChar, 0, qChar.length);
                 break;
 
             case "webP":
+                random = (int)(Math.random() * webP.length);
+                qChar = webP[random].toCharArray();
+                question.setText(qChar, 0, qChar.length);
                 break;
 
             case "webD":
+                random = (int)(Math.random() * webD.length);
+                qChar = webD[random].toCharArray();
+                question.setText(qChar, 0, qChar.length);
                 break;
 
             case "plat":
+                random = (int)(Math.random() * plat.length);
+                qChar = plat[random].toCharArray();
+                question.setText(qChar, 0, qChar.length);
                 break;
 
             case "manage":
+                random = (int)(Math.random() * manage.length);
+                qChar = manage[random].toCharArray();
+                question.setText(qChar, 0, qChar.length);
                 break;
         }
 
@@ -209,18 +232,43 @@ public class mock_type extends AppCompatActivity {
                         break;
 
                     case "uiux":
+                        random2 = rnd.nextInt(uiux.length);
+                        if (random2 == random) if (random2++ > uiux.length) random2 = 0;
+                        qChar = uiux[random2].toCharArray();
+                        question.setText(qChar, 0, qChar.length);
+                        random = random2;
                         break;
 
                     case "webP":
+                        random2 = rnd.nextInt(webP.length);
+                        if (random2 == random) if (random2++ > webP.length) random2 = 0;
+                        qChar = webP[random2].toCharArray();
+                        question.setText(qChar, 0, qChar.length);
+                        random = random2;
                         break;
 
                     case "webD":
+                        random2 = rnd.nextInt(webD.length);
+                        if (random2 == random) if (random2++ > webD.length) random2 = 0;
+                        qChar = webD[random2].toCharArray();
+                        question.setText(qChar, 0, qChar.length);
+                        random = random2;
                         break;
 
                     case "plat":
+                        random2 = rnd.nextInt(plat.length);
+                        if (random2 == random) if (random2++ > plat.length) random2 = 0;
+                        qChar = plat[random2].toCharArray();
+                        question.setText(qChar, 0, qChar.length);
+                        random = random2;
                         break;
 
                     case "manage":
+                        random2 = rnd.nextInt(manage.length);
+                        if (random2 == random) if (random2++ > manage.length) random2 = 0;
+                        qChar = manage[random2].toCharArray();
+                        question.setText(qChar, 0, qChar.length);
+                        random = random2;
                         break;
                 }
 

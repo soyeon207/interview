@@ -107,7 +107,7 @@ public class mock_select extends AppCompatActivity {
 
                 mock2 = (RelativeLayout) findViewById(R.id.mock2);
                 text = findViewById(R.id.text_mock2);
-                text.setText("UI/UX 디자인");
+                text.setText("UI/UX\n디자인");
                 mock2.setOnClickListener(changeActivity);
 
                 mock3 = (RelativeLayout) findViewById(R.id.mock3);
@@ -117,7 +117,7 @@ public class mock_select extends AppCompatActivity {
 
                 mock4 = (RelativeLayout) findViewById(R.id.mock4);
                 text = findViewById(R.id.text_mock4);
-                text.setText("CONTENT/WEB 디자인");
+                text.setText("CONTENT/WEB\n디자인");
                 mock4.setOnClickListener(changeActivity);
 
                 mock5 = (RelativeLayout) findViewById(R.id.mock5);
