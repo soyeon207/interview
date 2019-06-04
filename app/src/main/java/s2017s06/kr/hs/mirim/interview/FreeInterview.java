@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class FreeInterview extends AppCompatActivity {
@@ -24,6 +27,10 @@ public class FreeInterview extends AppCompatActivity {
     String id,pwd;
     Button start;
     ArrayList<String> question = new ArrayList<String>();
+
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+    int j = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
