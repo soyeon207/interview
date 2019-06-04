@@ -46,7 +46,6 @@ public class StartActivity extends TabActivity {
     String pwd2,id2;
     int positions;
     ListView listView;
-    Button tip_first;
     MyListAdapter myListAdapter;
     ArrayList<list_item> list_itemArrayList;
 
@@ -59,12 +58,7 @@ public class StartActivity extends TabActivity {
         Intent intent = getIntent();
         id2 =intent.getStringExtra("id");
         pwd2=intent.getStringExtra("pwd");
-        tip_first.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
         listView = findViewById(R.id.start_listview);
         list_itemArrayList = new ArrayList<list_item>();
 

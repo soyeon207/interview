@@ -195,7 +195,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="면접 예상 질문"
+                            android:text="면접 후기"
                             android:textColor="#000000"
                             android:textSize="25dp"
                             android:textStyle="bold"
@@ -207,7 +207,7 @@
                             android:textAlignment="center"
                             android:textSize="20dp"
                             android:textColor="#000000"
-                            android:text="미림에 들어오는 회사\n예상질문을 미리 확인하고\n지금부터 면접을 준비하세요!"
+                            android:text="미림에 들어오는 회사\n면접후기를 미리 확인하고\n지금부터 면접을 준비하세요!"
                             />
 
                         <Button
