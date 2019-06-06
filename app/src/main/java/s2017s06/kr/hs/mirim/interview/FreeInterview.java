@@ -30,7 +30,7 @@ public class FreeInterview extends AppCompatActivity {
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
-    int j = 2;
+    int j = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,11 @@ public class FreeInterview extends AppCompatActivity {
         Items = new ArrayList<String>();
         Items.add("좌우명이 뭔가요?");
         Items.add("마찰이 생긴다면 어떻게 대처할 건가요?");
+
+        /*if(){
+            databaseReference.child("user").child(id).child("question").push().setValue(Items.get(0));
+            databaseReference.child("user").child(id).child("question").push().setValue(Items.get(1));
+        }*/
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_multichoice, Items);
         listView = (ListView) findViewById(R.id.listview);

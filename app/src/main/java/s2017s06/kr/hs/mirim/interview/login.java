@@ -55,7 +55,6 @@ public class login extends AppCompatActivity {
 
                 mdatabaseRef.addValueEventListener(new ValueEventListener() {
 
-
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         for(DataSnapshot messeage : dataSnapshot.getChildren()){
