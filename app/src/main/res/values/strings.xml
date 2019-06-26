@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">interview</string>
+    <string name="app_name">모면</string>
     <string name="title_activity_loginup">loginup</string>
     <string name="title_activity_login">login</string>
 

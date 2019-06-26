@@ -41,7 +41,7 @@ import android.support.v7.app.AppCompatActivity;
 public class StartActivity extends TabActivity {
     TextView nickshow,interview;
     LinearLayout Mock,Free;
-    TextView exit_btn;
+    TextView exit_btn,watch_btn;
     ImageView write;
     String pwd2,id2;
     int positions;
@@ -159,6 +159,16 @@ public class StartActivity extends TabActivity {
 
         nickshow = findViewById(R.id.nickname_show);
         exit_btn = findViewById(R.id.exit_interview);
+        watch_btn = findViewById(R.id.watch);
+
+        watch_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("content://media/internal/images/media"));        //저장되어있는 스토리지에 미디어폴더로 접근하여 겔러리를 보여준다.
+                startActivity((mIntent));
+
+            }
+        });
 
         exit_btn.setOnClickListener(new View.OnClickListener() {
 
