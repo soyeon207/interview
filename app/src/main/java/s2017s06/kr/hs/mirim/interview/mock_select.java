@@ -135,7 +135,7 @@ public class mock_select extends AppCompatActivity {
             case "company":
                 mock1 = (RelativeLayout) findViewById(R.id.mock1);
                 text = findViewById(R.id.text_mock1);
-                text.setText("글로벌 휴머니즘");
+                text.setText("글로벌\n휴머니즘");
                 mock1.setOnClickListener(changeActivity);
 
                 mock2 = (RelativeLayout) findViewById(R.id.mock2);
