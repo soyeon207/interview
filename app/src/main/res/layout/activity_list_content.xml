@@ -31,6 +31,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
             android:id="@+id/back_content"
+            android:visibility="gone"
             />
     </RelativeLayout>
 

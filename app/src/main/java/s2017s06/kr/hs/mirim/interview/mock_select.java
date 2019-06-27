@@ -63,7 +63,7 @@ public class mock_select extends AppCompatActivity {
                         break;
 
                     case R.id.mock4:
-                        if (mock == "type") type = "webD";
+                        if (mock.equals("type")) type = "webD";
                         if(mock.equals("company")) company = "sqi";
                         break;
 
